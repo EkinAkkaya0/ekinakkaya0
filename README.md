@@ -1,11 +1,11 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/sheet-dark.svg" />
-  <img src="assets/sheet-light.svg" width="100%" alt="Ekin Akkaya, platform mühendisi" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/pipeline-dark.svg" />
+  <img src="assets/pipeline-light.svg" width="100%" alt="Ekin Akkaya — Full-Stack ve DevOps Engineer, projelendirmeden yayına uçtan uca" />
 </picture>
 
-<img src="https://img.shields.io/github/last-commit/ekinakkaya0/ekinakkaya0?style=flat-square&label=son%20g%C3%BCncelleme&labelColor=30363D&color=C2410C&display_timestamp=author" alt="" />
+<img src="https://img.shields.io/github/last-commit/ekinakkaya0/ekinakkaya0?style=flat-square&label=son%20g%C3%BCncelleme&labelColor=30363D&color=1A7F37&display_timestamp=author" alt="" />
 <img src="https://komarev.com/ghpvc/?username=ekinakkaya0&label=g%C3%B6r%C3%BCnt%C3%BClenme&color=30363D&style=flat-square" alt="" />
 <img src="https://img.shields.io/github/followers/ekinakkaya0?style=flat-square&logo=github&logoColor=C9D1D9&label=takip%C3%A7i&labelColor=30363D&color=30363D" alt="" />
 
@@ -17,14 +17,18 @@
 </div>
 
 ```
-┌─ LEJANT ─────────────────────────────────────────────────────────┐
-│                                                                  │
-│  ━━━━━   platform        200+ modül, 43 panel, tek kod tabanı    │
-│  ─────   jeo-uzamsal     CAD → PostGIS → GeoServer → tarayıcı    │
-│  ┄┄┄┄┄   dağıtım         mavi-yeşil geçiş, otomatik geri alma    │
-│  ·  ·    entegrasyon     mobil API, SSO, GTFS, görüntü işleme    │
-│                                                                  │
-└──────────────────────────────────────────────────────────────────┘
+┌─ ÇALIŞTIĞIM ALANLAR ──────────────────────────────────────────────────────────┐
+│                                                                               │
+│  kamu / belediye        multi-tenant yönetim platformu, CBS, vatandaş mobil   │
+│  tarım / agrotech       üretici platformu, QR izlenebilirlik, toprak analizi  │
+│  sanayi / üretim        stok ve sipariş takibi, CNC makine izleme             │
+│  perakende              CRM/ERP, pazaryeri ve ödeme entegrasyonu              │
+│  turizm / gastronomi    restoran işletim sistemi, otel, garson uygulaması     │
+│  spor kulüpleri         kurumsal site, üyelik, içerik yönetimi                │
+│  sivil toplum           istihdam platformu, kadın platformu, bilim merkezi    │
+│  kamu ihale / mevzuat   mevzuat ve teklif modülü                              │
+│                                                                               │
+└───────────────────────────────────────────────────────────────────────────────┘
 ```
 
 <picture>
@@ -34,16 +38,34 @@
 
 ## Kısaca
 
-Belediyeler için çok kiracılı bir yönetim sistemi yazıyorum. Tek kod tabanı, kurum başına
-ayrı veritabanı. Bugün 200'ün üzerinde backend modülü, 43 panel modülü ve 4800 civarı
-backend testi var.
+Yazılım işlerini uçtan uca alıyorum. Keşif görüşmesinden fizibiliteye, mimariden arayüz
+tasarımına, backend ve mobil geliştirmeden sunucuda yayına ve sonrasındaki işletime kadar
+zincirin tamamı bende kalıyor. Arada kimseye devretmem gerekmiyor.
 
-İş uygulama katmanında bitmiyor. Sistemin koştuğu makineler, dağıtım hattı, izleme,
-yedekler ve sertifikalar da bende.
+En büyük işim belediyeler için yazdığım multi-tenant yönetim platformu: tek kod tabanı,
+kurum başına ayrı veritabanı, 200'ün üzerinde backend modülü ve 43 panel modülü. Ama iş
+oradan ibaret değil. Tarımsal üretici platformu, fabrikada CNC makine ve stok takibi,
+tekstilde CRM/ERP ile pazaryeri ve ödeme entegrasyonu, restoran işletim sistemi ve dört
+ayrı Flutter uygulaması da aynı elden çıktı.
 
-Son dönemde uğraştıklarım: imar paftasının CAD dosyasından çıkıp tarayıcıda vektör karo
-olarak açılması, internete kapalı bir sunucuya USB'yle kurulum, yirmi küsur kiracıya aynı
-anda migration, Postfix'in SNI haritasının sertifika yenilemesinden sonra bayat kalması.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-dark.svg" />
+  <img src="assets/rule-light.svg" width="100%" alt="" />
+</picture>
+
+## Uçtan uca
+
+| Aşama | Ne yapıyorum |
+|:--|:--|
+| **Keşif ve kapsam** | Kurumla oturup ihtiyacı çıkarmak, mevcut sistemi incelemek, kapsamı yazıya dökmek. |
+| **Fizibilite ve teklif** | Sunucu altyapısı ve maliyet hesabı, teknik ön araştırma raporu, hibe/ihale başvuru dosyası, fiyat teklifi. |
+| **Mimari** | Veri modeli, API sözleşmesi, yetki matrisi, entegrasyon sınırları, monorepo mu ayrı servis mi kararı. |
+| **Arayüz** | Mockup'tan üretime. Tasarım dili, responsive davranış, bileşen kütüphanesi. |
+| **Geliştirme** | Backend, frontend ve mobil. Node/Express, FastAPI, Next.js, Flutter. |
+| **Veri** | Şema tasarımı, migration hattı, PostGIS, raporlama ve toplu veri aktarımı. |
+| **Yayın** | Docker, GitHub Actions, blue-green deployment, nginx, TLS, DNS. Hetzner, Turhost, Hostinger ve on-prem. |
+| **İşletim** | İzleme ve alarm, yedekleme ve restore, olay müdahalesi, kapasite ve maliyet takibi. |
+| **Belgeleme** | Kullanım kılavuzu, runbook, teknik olmayan anlatım, satış sunumu. |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/rule-dark.svg" />
@@ -56,20 +78,14 @@ Katman başına, gerçekten uğraştığım türden sorunlar:
 
 | Katman | |
 |:--|:--|
-| **HTTP kenarı** | Mavi-yeşil geçişte ters vekilin yukarı akışını devretmek. Tek dosya olarak bind-mount edilmiş bir yapılandırmanın konteynere hiç inmemesi (bayat inode); `nginx -s reload` bunu kurtarmıyor. |
-| **PostgreSQL** | Kiracı rollerinin grant kaybından sonra gelen `permission denied for table`. `pg_restore`'un dolu bir şemaya ekleme yapıp kayıtları ikiye katlaması. Migration'ın bütün aktif kiracılara sırayla uygulanması. |
-| **Jeo-uzamsal veri** | Yanlış etiketlenmiş EPSG tanımları, CAD kaynaklı koordinat kayması. `gpkg_extensions` tablosu olmadan GeoServer'ın GeoPackage katmanını hiç görmemesi. SLD ile referans imar yazılımına piksel düzeyinde renk eşleme. |
-| **Uygulama** | Kilitsiz seri numarası üretiminin yarış koşulu. Alan adı beyaz listede olmadığı için API eşleyicisinin veriyi sessizce düşürmesi. Mali hesapta kayan noktalı sayının yasak olduğu yerler. |
-| **Sistem** | 30 GB'a dayanan bir Next.js derlemesi için takas alanı açmak. Kendi barındırdığım koşucuların topluca kaydının düşmesi. |
-| **Posta ve TLS** | Postfix SNI haritasının sertifika yenilemesinden sonra bayat kalması; `postmap -F` olmadan çözülmüyor. Birbirini ezen iki ayrı certbot ağacı. |
-
-## Genişlik
-
-Vatandaş mobil uygulamasının REST API'si, tek oturum açma vekilleri, araç takip
-entegrasyonu, GTFS beslemeli rota planlayıcı, görüntü işleme hattını besleyen ayrı bir
-FastAPI servisi, S3 uyumlu nesne depolama, yedekleme ve geri yükleme, VPN üzerinden kurum
-içi sunucuya bağlanmak, kapalı ağ için USB kurulum paketi, mali muhasebe ve bütçe motoru,
-rol-izin matrisi, denetim izi, gerçek zamanlı bildirim.
+| **Reverse proxy** | Blue-green deployment'ta nginx upstream'ini devretmek. Tek dosya olarak bind-mount edilmiş bir config'in konteynere hiç inmemesi (stale inode); `nginx -s reload` bunu kurtarmıyor, süreci HUP'lamak gerekiyor. |
+| **PostgreSQL** | Tenant rollerinin grant kaybından sonra gelen `permission denied for table`. `pg_restore`'un dolu bir şemaya append edip kayıtları ikiye katlaması. Migration'ın bütün aktif tenant'lara sırayla uygulanması. |
+| **Geospatial** | Yanlış etiketlenmiş EPSG tanımları ve CAD kaynaklı koordinat kayması. `gpkg_extensions` tablosu olmadan GeoServer'ın GeoPackage katmanını hiç görmemesi. SLD ile referans yazılıma piksel düzeyinde renk eşleme, MVT cache'inin sunucuda pişirilmesi. |
+| **Uygulama** | Kilitsiz seri numarası üretiminde race condition. Alan adı whitelist'te olmadığı için API mapper'ının payload'u sessizce düşürmesi. Mali hesapta floating point'in yasak olduğu yerler. |
+| **Mobil** | OCR başarısız olunca e-Devlet doğrulamasının kırılması ve başvuru akışının komple durması. Upload'ın 413 dönmesi çünkü isteği alan vhost'ta `client_max_body_size` tanımlı değil. |
+| **Sistem** | 30 GB'a dayanan bir Next.js build'i için swap açmak. Self-hosted runner'ların topluca deregister olması. systemd unit'leri, disk baskısı, arşivleme. |
+| **Ağ ve sertifika** | Postfix SNI map'inin sertifika yenilemesinden sonra bayat kalması; `postmap -F` olmadan çözülmüyor. Birbirini ezen iki ayrı certbot ağacı. |
+| **Olay müdahalesi** | Ele geçirilmiş bir sitede forensic çıkarmak. Üretim veritabanlarını yedekten ayağa kaldırmak ve nedeni ortadan kaldıran düzeltmeyi hatta eklemek. |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/rule-dark.svg" />
@@ -80,24 +96,36 @@ rol-izin matrisi, denetim izi, gerçek zamanlı bildirim.
 
 <table>
 <tr>
-<td valign="middle" width="17%"><b>Sunucu tarafı</b></td>
-<td valign="middle"><img src="https://img.shields.io/badge/Node.js-30363D?style=flat-square&labelColor=30363D&logo=nodedotjs&logoColor=5FA04E" alt="Node.js" /> <img src="https://img.shields.io/badge/Express-30363D?style=flat-square&labelColor=30363D&logo=express&logoColor=C9D1D9" alt="Express" /> <img src="https://img.shields.io/badge/Socket.IO-30363D?style=flat-square&labelColor=30363D&logo=socketdotio&logoColor=C9D1D9" alt="Socket.IO" /> <img src="https://img.shields.io/badge/ES_Modules-30363D?style=flat-square&labelColor=30363D" alt="ES Modules" /> <img src="https://img.shields.io/badge/Python-30363D?style=flat-square&labelColor=30363D&logo=python&logoColor=3776AB" alt="Python" /> <img src="https://img.shields.io/badge/FastAPI-30363D?style=flat-square&labelColor=30363D&logo=fastapi&logoColor=009688" alt="FastAPI" /></td>
+<td valign="middle" width="17%"><b>Runtime &amp; API</b></td>
+<td valign="middle"><img src="https://img.shields.io/badge/Node.js-30363D?style=flat-square&labelColor=30363D&logo=nodedotjs&logoColor=5FA04E" alt="Node.js" /> <img src="https://img.shields.io/badge/Express-30363D?style=flat-square&labelColor=30363D&logo=express&logoColor=C9D1D9" alt="Express" /> <img src="https://img.shields.io/badge/ES_Modules-30363D?style=flat-square&labelColor=30363D" alt="ES Modules" /> <img src="https://img.shields.io/badge/Socket.IO-30363D?style=flat-square&labelColor=30363D&logo=socketdotio&logoColor=C9D1D9" alt="Socket.IO" /> <img src="https://img.shields.io/badge/Python-30363D?style=flat-square&labelColor=30363D&logo=python&logoColor=3776AB" alt="Python" /> <img src="https://img.shields.io/badge/FastAPI-30363D?style=flat-square&labelColor=30363D&logo=fastapi&logoColor=009688" alt="FastAPI" /> <img src="https://img.shields.io/badge/PHP_%2F_Laravel-30363D?style=flat-square&labelColor=30363D&logo=laravel&logoColor=FF2D20" alt="PHP / Laravel" /></td>
 </tr>
 <tr>
-<td valign="middle" width="17%"><b>Veri ve şema</b></td>
-<td valign="middle"><img src="https://img.shields.io/badge/PostgreSQL-30363D?style=flat-square&labelColor=30363D&logo=postgresql&logoColor=4169E1" alt="PostgreSQL" /> <img src="https://img.shields.io/badge/Sequelize-30363D?style=flat-square&labelColor=30363D&logo=sequelize&logoColor=52B0E7" alt="Sequelize" /> <img src="https://img.shields.io/badge/Migration-30363D?style=flat-square&labelColor=30363D" alt="Migration" /> <img src="https://img.shields.io/badge/Transaction-30363D?style=flat-square&labelColor=30363D" alt="Transaction" /> <img src="https://img.shields.io/badge/Decimal-30363D?style=flat-square&labelColor=30363D" alt="Decimal" /></td>
+<td valign="middle" width="17%"><b>Frontend</b></td>
+<td valign="middle"><img src="https://img.shields.io/badge/Next.js-30363D?style=flat-square&labelColor=30363D&logo=nextdotjs&logoColor=C9D1D9" alt="Next.js" /> <img src="https://img.shields.io/badge/React-30363D?style=flat-square&labelColor=30363D&logo=react&logoColor=61DAFB" alt="React" /> <img src="https://img.shields.io/badge/TypeScript-30363D?style=flat-square&labelColor=30363D&logo=typescript&logoColor=3178C6" alt="TypeScript" /> <img src="https://img.shields.io/badge/Tailwind-30363D?style=flat-square&labelColor=30363D&logo=tailwindcss&logoColor=06B6D4" alt="Tailwind" /> <img src="https://img.shields.io/badge/MUI-30363D?style=flat-square&labelColor=30363D&logo=mui&logoColor=007FFF" alt="MUI" /> <img src="https://img.shields.io/badge/Vite-30363D?style=flat-square&labelColor=30363D&logo=vite&logoColor=646CFF" alt="Vite" /></td>
 </tr>
 <tr>
-<td valign="middle" width="17%"><b>Jeo-uzamsal</b></td>
-<td valign="middle"><img src="https://img.shields.io/badge/PostGIS-30363D?style=flat-square&labelColor=30363D&logo=postgresql&logoColor=C2410C" alt="PostGIS" /> <img src="https://img.shields.io/badge/GeoServer-30363D?style=flat-square&labelColor=30363D&logo=osgeo&logoColor=4CAF50" alt="GeoServer" /> <img src="https://img.shields.io/badge/GDAL_%2F_OGR-30363D?style=flat-square&labelColor=30363D&logo=gdal&logoColor=5CAE58" alt="GDAL / OGR" /> <img src="https://img.shields.io/badge/QGIS-30363D?style=flat-square&labelColor=30363D&logo=qgis&logoColor=8BC34A" alt="QGIS" /> <img src="https://img.shields.io/badge/OGC_WMS_%2F_WFS-30363D?style=flat-square&labelColor=30363D" alt="OGC WMS / WFS" /> <img src="https://img.shields.io/badge/Vekt%C3%B6r_karo_%28MVT%29-30363D?style=flat-square&labelColor=30363D" alt="Vektör karo (MVT)" /> <img src="https://img.shields.io/badge/SLD-30363D?style=flat-square&labelColor=30363D" alt="SLD" /> <img src="https://img.shields.io/badge/EPSG_%2F_CRS-30363D?style=flat-square&labelColor=30363D" alt="EPSG / CRS" /> <img src="https://img.shields.io/badge/GeoPackage-30363D?style=flat-square&labelColor=30363D" alt="GeoPackage" /> <img src="https://img.shields.io/badge/OpenLayers-30363D?style=flat-square&labelColor=30363D&logo=openlayers&logoColor=4FC3F7" alt="OpenLayers" /></td>
+<td valign="middle" width="17%"><b>Mobil</b></td>
+<td valign="middle"><img src="https://img.shields.io/badge/Flutter-30363D?style=flat-square&labelColor=30363D&logo=flutter&logoColor=02569B" alt="Flutter" /> <img src="https://img.shields.io/badge/Dart-30363D?style=flat-square&labelColor=30363D&logo=dart&logoColor=0175C2" alt="Dart" /></td>
 </tr>
 <tr>
-<td valign="middle" width="17%"><b>İstemci</b></td>
-<td valign="middle"><img src="https://img.shields.io/badge/Next.js-30363D?style=flat-square&labelColor=30363D&logo=nextdotjs&logoColor=C9D1D9" alt="Next.js" /> <img src="https://img.shields.io/badge/React-30363D?style=flat-square&labelColor=30363D&logo=react&logoColor=61DAFB" alt="React" /> <img src="https://img.shields.io/badge/TypeScript-30363D?style=flat-square&labelColor=30363D&logo=typescript&logoColor=3178C6" alt="TypeScript" /> <img src="https://img.shields.io/badge/MUI-30363D?style=flat-square&labelColor=30363D&logo=mui&logoColor=007FFF" alt="MUI" /> <img src="https://img.shields.io/badge/Tailwind-30363D?style=flat-square&labelColor=30363D&logo=tailwindcss&logoColor=06B6D4" alt="Tailwind" /></td>
+<td valign="middle" width="17%"><b>Veri katmanı</b></td>
+<td valign="middle"><img src="https://img.shields.io/badge/PostgreSQL-30363D?style=flat-square&labelColor=30363D&logo=postgresql&logoColor=4169E1" alt="PostgreSQL" /> <img src="https://img.shields.io/badge/Sequelize-30363D?style=flat-square&labelColor=30363D&logo=sequelize&logoColor=52B0E7" alt="Sequelize" /> <img src="https://img.shields.io/badge/Prisma-30363D?style=flat-square&labelColor=30363D&logo=prisma&logoColor=2D3748" alt="Prisma" /> <img src="https://img.shields.io/badge/Migration-30363D?style=flat-square&labelColor=30363D" alt="Migration" /> <img src="https://img.shields.io/badge/Transaction_%2F_ACID-30363D?style=flat-square&labelColor=30363D" alt="Transaction / ACID" /> <img src="https://img.shields.io/badge/Decimal-30363D?style=flat-square&labelColor=30363D" alt="Decimal" /></td>
 </tr>
 <tr>
-<td valign="middle" width="17%"><b>İşletim</b></td>
-<td valign="middle"><img src="https://img.shields.io/badge/Docker-30363D?style=flat-square&labelColor=30363D&logo=docker&logoColor=2496ED" alt="Docker" /> <img src="https://img.shields.io/badge/NGINX-30363D?style=flat-square&labelColor=30363D&logo=nginx&logoColor=2ECC71" alt="NGINX" /> <img src="https://img.shields.io/badge/GitHub_Actions-30363D?style=flat-square&labelColor=30363D&logo=githubactions&logoColor=58A6FF" alt="GitHub Actions" /> <img src="https://img.shields.io/badge/Linux-30363D?style=flat-square&labelColor=30363D&logo=linux&logoColor=FCC624" alt="Linux" /> <img src="https://img.shields.io/badge/Ubuntu-30363D?style=flat-square&labelColor=30363D&logo=ubuntu&logoColor=E95420" alt="Ubuntu" /> <img src="https://img.shields.io/badge/MinIO_%2F_S3-30363D?style=flat-square&labelColor=30363D&logo=minio&logoColor=F87171" alt="MinIO / S3" /> <img src="https://img.shields.io/badge/Grafana-30363D?style=flat-square&labelColor=30363D&logo=grafana&logoColor=F46800" alt="Grafana" /> <img src="https://img.shields.io/badge/Sentry_%2F_GlitchTip-30363D?style=flat-square&labelColor=30363D&logo=sentry&logoColor=A78BFA" alt="Sentry / GlitchTip" /> <img src="https://img.shields.io/badge/Postfix_%2F_Dovecot-30363D?style=flat-square&labelColor=30363D" alt="Postfix / Dovecot" /> <img src="https://img.shields.io/badge/Let%27s_Encrypt-30363D?style=flat-square&labelColor=30363D&logo=letsencrypt&logoColor=5EA9E8" alt="Let's Encrypt" /></td>
+<td valign="middle" width="17%"><b>Geospatial</b></td>
+<td valign="middle"><img src="https://img.shields.io/badge/PostGIS-30363D?style=flat-square&labelColor=30363D&logo=postgresql&logoColor=3FB950" alt="PostGIS" /> <img src="https://img.shields.io/badge/GeoServer-30363D?style=flat-square&labelColor=30363D&logo=osgeo&logoColor=4CAF50" alt="GeoServer" /> <img src="https://img.shields.io/badge/GDAL_%2F_OGR-30363D?style=flat-square&labelColor=30363D&logo=gdal&logoColor=5CAE58" alt="GDAL / OGR" /> <img src="https://img.shields.io/badge/QGIS-30363D?style=flat-square&labelColor=30363D&logo=qgis&logoColor=8BC34A" alt="QGIS" /> <img src="https://img.shields.io/badge/OGC_WMS_%2F_WFS-30363D?style=flat-square&labelColor=30363D" alt="OGC WMS / WFS" /> <img src="https://img.shields.io/badge/MVT-30363D?style=flat-square&labelColor=30363D" alt="MVT" /> <img src="https://img.shields.io/badge/SLD-30363D?style=flat-square&labelColor=30363D" alt="SLD" /> <img src="https://img.shields.io/badge/EPSG_%2F_CRS-30363D?style=flat-square&labelColor=30363D" alt="EPSG / CRS" /> <img src="https://img.shields.io/badge/OpenLayers-30363D?style=flat-square&labelColor=30363D&logo=openlayers&logoColor=4FC3F7" alt="OpenLayers" /> <img src="https://img.shields.io/badge/Leaflet-30363D?style=flat-square&labelColor=30363D&logo=leaflet&logoColor=7CB342" alt="Leaflet" /></td>
+</tr>
+<tr>
+<td valign="middle" width="17%"><b>DevOps</b></td>
+<td valign="middle"><img src="https://img.shields.io/badge/Docker-30363D?style=flat-square&labelColor=30363D&logo=docker&logoColor=2496ED" alt="Docker" /> <img src="https://img.shields.io/badge/GitHub_Actions-30363D?style=flat-square&labelColor=30363D&logo=githubactions&logoColor=58A6FF" alt="GitHub Actions" /> <img src="https://img.shields.io/badge/NGINX-30363D?style=flat-square&labelColor=30363D&logo=nginx&logoColor=3FB950" alt="NGINX" /> <img src="https://img.shields.io/badge/Blue--Green_Deployment-30363D?style=flat-square&labelColor=30363D" alt="Blue-Green Deployment" /> <img src="https://img.shields.io/badge/GHCR-30363D?style=flat-square&labelColor=30363D" alt="GHCR" /> <img src="https://img.shields.io/badge/Linux-30363D?style=flat-square&labelColor=30363D&logo=linux&logoColor=FCC624" alt="Linux" /> <img src="https://img.shields.io/badge/systemd-30363D?style=flat-square&labelColor=30363D" alt="systemd" /></td>
+</tr>
+<tr>
+<td valign="middle" width="17%"><b>Gözlemlenebilirlik</b></td>
+<td valign="middle"><img src="https://img.shields.io/badge/Grafana-30363D?style=flat-square&labelColor=30363D&logo=grafana&logoColor=F46800" alt="Grafana" /> <img src="https://img.shields.io/badge/Sentry_%2F_GlitchTip-30363D?style=flat-square&labelColor=30363D&logo=sentry&logoColor=A78BFA" alt="Sentry / GlitchTip" /> <img src="https://img.shields.io/badge/MinIO_%2F_S3-30363D?style=flat-square&labelColor=30363D&logo=minio&logoColor=F87171" alt="MinIO / S3" /> <img src="https://img.shields.io/badge/Postfix_%2F_Dovecot-30363D?style=flat-square&labelColor=30363D" alt="Postfix / Dovecot" /> <img src="https://img.shields.io/badge/Let%27s_Encrypt-30363D?style=flat-square&labelColor=30363D&logo=letsencrypt&logoColor=5EA9E8" alt="Let's Encrypt" /></td>
+</tr>
+<tr>
+<td valign="middle" width="17%"><b>Entegrasyon</b></td>
+<td valign="middle"><img src="https://img.shields.io/badge/REST-30363D?style=flat-square&labelColor=30363D&logo=fastapi&logoColor=C9D1D9" alt="REST" /> <img src="https://img.shields.io/badge/SSO_%2F_OAuth-30363D?style=flat-square&labelColor=30363D" alt="SSO / OAuth" /> <img src="https://img.shields.io/badge/Webhook-30363D?style=flat-square&labelColor=30363D" alt="Webhook" /> <img src="https://img.shields.io/badge/iyzico-30363D?style=flat-square&labelColor=30363D" alt="iyzico" /> <img src="https://img.shields.io/badge/Trendyol-30363D?style=flat-square&labelColor=30363D" alt="Trendyol" /> <img src="https://img.shields.io/badge/GTFS-30363D?style=flat-square&labelColor=30363D" alt="GTFS" /> <img src="https://img.shields.io/badge/OCR-30363D?style=flat-square&labelColor=30363D" alt="OCR" /></td>
 </tr>
 </table>
 
@@ -109,60 +137,84 @@ rol-izin matrisi, denetim izi, gerçek zamanlı bildirim.
 ## Yakından
 
 <details>
-<summary><b>Çok kiracılı platform</b></summary>
+<summary><b>Multi-tenant yönetim platformu</b></summary>
 
 Her kurum kendi PostgreSQL veritabanında duruyor, global yapılandırma ayrı bir master
-veritabanında. İstek başlığındaki kiracı kimliği ara katmanda çözülüyor; bağlantı,
-modeller ve izinler oradan üretiliyor. Yeni bir belediye eklemek yeni bir sürüm değil,
+veritabanında. İstek başlığındaki tenant kimliği bir middleware'de çözülüyor; connection,
+modeller ve permission'lar oradan üretiliyor. Yeni bir kurum eklemek yeni bir sürüm değil,
 yeni bir kayıt.
 
-Modüllerin tamamı aynı iskelet üzerinde: model, denetleyici, rota. Yetki sayfa bazında
-oku/oluştur/güncelle/sil. Menü ağacı veritabanından üretiliyor ve menü, izin, rota tek bir
-kısa ad üzerinden hizalı duruyor.
+Modüllerin tamamı aynı iskelet üzerinde: model, controller, route. RBAC sayfa bazında
+read/create/update/delete. Menü ağacı veritabanından üretiliyor ve menü, permission, route
+tek bir slug üzerinden hizalı duruyor.
 
-Para hesapları `Decimal` ile yapılıyor, birden fazla tabloya dokunan iş tek transaction
-içinde. Otomatik şema senkronizasyonu kapalı; her değişiklik sürümlenmiş bir migration.
-Denetim kanıtı olabilecek kayıt otomatik silinmiyor, arşivleniyor.
-
-</details>
-
-<details>
-<summary><b>Jeo-uzamsal hat</b></summary>
-
-CAD ortamında üretilmiş 1/1000 imar planlarını GeoPackage'a çevirip koordinat sistemi ve
-karakter kodlaması sorunlarını düzelttikten sonra PostGIS'e taşıdım. Oradan tarayıcıdaki
-haritaya kadar hattın tamamı bende.
-
-Yayın GeoServer üzerinden: WMS, WFS ve vektör karo. Stiller SLD ile tanımlı ve stil
-kataloğu referans imar yazılımıyla piksel düzeyinde kıyaslanarak eşitlendi. Nizam, ada ve
-yapılaşma koşulu katmanları ham veriden türetildi.
-
-Renge göre ayrım gereken katmanlarda stil kararını istemciden alıp sunucuda karoya gömdüm;
-ağır katmanlarda istemci yükü belirgin düştü. OpenLayers panelinde 3B bina görselleştirme
-var, harita durumu kullanıcı bazında saklanıyor. Görüntüden üretilen kaçak yapı tespitleri
-kurumun kendi kayıtlarıyla aynı ekranda.
+Mali hesaplar `Decimal` ile, birden fazla tabloya dokunan iş tek transaction içinde.
+Otomatik şema senkronizasyonu kapalı; her değişiklik versiyonlanmış bir migration ve aktif
+tenant'ların hepsine sırayla uygulanıyor. Denetim kanıtı olabilecek kayıt otomatik
+silinmiyor, arşivleniyor.
 
 </details>
 
 <details>
-<summary><b>Dağıtım ve işletim</b></summary>
+<summary><b>Geospatial veri hattı</b></summary>
 
-Aday slot hazırlanıyor, migration'lar koşuyor, doğrulama geçerse ters vekilin yukarı akışı
-devrediliyor, ardından duman testi. Başarısızlıkta geri alma otomatik. Elle konteyner
-yeniden başlatmak yasak; o yol bayat yukarı akış ve 502 demek.
+CAD ortamında üretilmiş 1/1000 imar planlarını GeoPackage'a çevirip CRS ve karakter
+kodlaması sorunlarını düzelttikten sonra PostGIS'e taşıdım. Oradan tarayıcıdaki haritaya
+kadar hattın tamamı bende.
+
+Yayın GeoServer üzerinden: WMS, WFS ve MVT. Stiller SLD ile tanımlı, stil kataloğu referans
+yazılımla piksel düzeyinde kıyaslanarak eşitlendi. Nizam, ada ve yapılaşma koşulu katmanları
+ham veriden türetildi.
+
+Renge göre ayrım gereken katmanlarda stil kararını istemciden alıp sunucuda tile'a gömdüm;
+ağır katmanlarda client yükü belirgin düştü. OpenLayers panelinde 3B bina görselleştirme
+var, harita durumu kullanıcı bazında persist ediliyor. Ayrıca Sentinel-2 altlıkları, parsel
+sorgu ekranı ve görüntüden üretilen tespitlerin kurum kayıtlarıyla aynı ekranda gösterimi.
+
+</details>
+
+<details>
+<summary><b>Yayın ve işletim</b></summary>
+
+Candidate slot hazırlanıyor, migration'lar koşuyor, validation geçerse nginx upstream'i
+devrediliyor, ardından smoke test. Başarısızlıkta rollback otomatik. Elle konteyner restart
+etmek yasak; o yol stale upstream ve 502 demek.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/log-dark.svg" />
   <img src="assets/log-light.svg" width="100%" alt="dağıtım günlüğünden satırlar" />
 </picture>
 
-Koşucular kendi barındırdığım makinelerde, imajlar sürümlenip etiketle yayınlanıyor.
-İzleme metrik toplayıcıdan alarm kurallarına, oradan anlık bildirime gidiyor; hata takibi
-ayrı bir serviste. Gerçek bir veri kaybı olayında üretim veritabanlarını yedekten ayağa
-kaldırdım, sonra aynı şeyin tekrarını engelleyen düzeltmeyi hatta ekledim.
+Runner'lar kendi barındırdığım makinelerde, imajlar versiyonlanıp tag ile yayınlanıyor.
+İzleme metrik toplayıcıdan alert kurallarına, oradan anlık bildirime gidiyor; error tracking
+ayrı bir serviste. Hetzner, Turhost, Hostinger ve müşteri sunucusunda on-prem kurulum yaptım;
+DNS, TLS ve mail tarafı da dahil.
 
-İnternete kapalı kurumlar için USB ile taşınan bir kurulum paketi var: tek komutluk
-sihirbaz, imajlar ve şema dâhil.
+İnternete kapalı kurumlar için USB ile taşınan bir kurulum paketi var: tek komutluk sihirbaz,
+imajlar ve şema dâhil.
+
+</details>
+
+<details>
+<summary><b>Belediye dışı işler</b></summary>
+
+**Tarım / agrotech** — Üretici, kooperatif, teknik ekip, sigorta ve denetleyici kurumun aynı
+süreçte rol aldığı bir platform. QR kodlu ürün izlenebilirliği, arsa-parsel sorgusu üzerinden
+toprak analizi görüntüleme, karbon ve su ayak izi hesabı, soğuk zincir lojistiği. Mevzuat
+dokümanlarından hesap kurallarını çıkarıp modüle çevirmek de bu işin parçasıydı.
+
+**Sanayi** — Fabrikada stok ve sipariş takibi, siparişin baştan sona kaydı, CNC makine
+durumlarının izlenmesi. Windows tarafında çalışan bir station agent'ın backend ile
+haberleşmesi dahil.
+
+**Perakende** — Tekstil firması için CRM/ERP, pazaryeri entegrasyonu ve ödeme sağlayıcı
+tarafında kaybolan siparişin izinin sürülmesi.
+
+**Gastronomi** — Restoran işletim sistemi. Flutter monorepo, garson uygulaması, kasa ve
+mutfak istasyonları.
+
+**Sivil toplum ve kurumsal** — İstihdam platformu (Flutter), kadın platformu, spor kulübü
+siteleri, bilim merkezi, kamu ihale ve mevzuat modülü.
 
 </details>
 
@@ -176,7 +228,7 @@ sihirbaz, imajlar ve şema dâhil.
 Üretimle ilgili bir şey iddia etmeden önce ölçerim; "muhtemelen öyledir" bir cevap değil.
 Denetim kanıtı olabilecek kaydı silmem, arşivlerim. Şema değişikliği elle değil migration
 ile gider. Geri dönüşü olmayan işlerde tek gözle yetinmem, biteni bağımsız gözlerle kırmaya
-çalışırım. Dağıtımın fark edilmesi gerekmiyor; fark ediliyorsa hatta bir sorun var demektir.
+çalışırım. Deployment'ın fark edilmesi gerekmiyor; fark ediliyorsa hatta bir sorun var.
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/rule-dark.svg" />
