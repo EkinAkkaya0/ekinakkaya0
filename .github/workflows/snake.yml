@@ -1,0 +1,36 @@
+name: Katkı Yılanı
+
+on:
+  schedule:
+    - cron: "0 */12 * * *"
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: snake
+  cancel-in-progress: true
+
+jobs:
+  uret:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Yılan animasyonunu üret
+        uses: Platane/snk@v3
+        id: snake
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            dist/github-snake.svg?color_snake=%236366F1&color_dots=%23E6EDF3,%23C4B5FD,%23A855F7,%237C3AED,%234C1D95
+            dist/github-snake-dark.svg?color_snake=%2322D3EE&color_dots=%230D1117,%23164E63,%230E7490,%2306B6D4,%2322D3EE
+
+      - name: output dalına yayınla
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
