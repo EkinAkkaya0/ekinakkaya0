@@ -260,6 +260,19 @@ Kod yazmakla bitmiyor: üretim ortamını da ben işletiyorum.
 
 <img src="https://capsule-render.vercel.app/api?type=rect&color=0:8B5CF6,50:6366F1,100:06B6D4&height=2&section=header" width="100%" height="2" alt="" />
 
+<!--
+  AKTİVİTE BÖLÜMÜ — şu an devre dışı.
+
+  Neden: bu depoların commit'leri ekinakkaya1@hotmail.com adresiyle atılıyor ama bu adres
+  GitHub hesabına ekli/doğrulanmış olmadığı için katkılar hiçbir profile yazılmıyor.
+  Ölçüm (20.08.2026): son 1 yıl 36 katkı, gizli (private) katkı 0, güncel seri 0.
+
+  Açmak için sırasıyla:
+    1) Settings -> Emails -> ekinakkaya1@hotmail.com adresini ekle ve doğrula
+       (GitHub geçmiş commit'leri de geriye dönük olarak bu hesaba yazar)
+    2) Settings -> Public profile -> "Include private contributions on my profile" işaretle
+    3) Aşağıdaki bloğu yorumdan çıkarıp bu satırların yerine koy
+
 ## Aktivite
 
 <div align="center">
@@ -276,7 +289,7 @@ Kod yazmakla bitmiyor: üretim ortamını da ben işletiyorum.
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:8B5CF6,50:6366F1,100:06B6D4&height=2&section=header" width="100%" height="2" alt="" />
+-->
 
 <div align="center">
 
