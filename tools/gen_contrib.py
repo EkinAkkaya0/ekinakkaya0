@@ -125,9 +125,15 @@ def build(p, cal, days, total, longest, now):
     # sayaçlar
     SX = 790
     o.append(f'<line x1="{SX-24}" y1="24" x2="{SX-24}" y2="{H-24}" stroke="{p["edge"]}"/>')
-    for i, (val, lab) in enumerate(((total, "son 1 yıl"), (longest, "en uzun seri"), (now, "güncel seri"))):
+    def tr(n):
+        """Türkçe binlik ayracı: 5602 -> 5.602"""
+        return f"{n:,}".replace(",", ".")
+
+    for i, (val, lab) in enumerate(((tr(total), "son 1 yıl"),
+                                    (tr(longest) + " gün", "en uzun seri"),
+                                    (tr(now) + " gün", "güncel seri"))):
         y = 52 + i*40
-        o.append(f'<text x="{SX}" y="{y}" font-family="{MONO}" font-size="20" font-weight="700" fill="{p["ink"]}">{val}</text>')
+        o.append(f'<text x="{SX}" y="{y}" font-family="{MONO}" font-size="19" font-weight="700" fill="{p["ink"]}">{val}</text>')
         o.append(f'<text x="{SX+2}" y="{y+16}" font-family="{MONO}" font-size="9.5" letter-spacing="1.1" fill="{p["faint"]}">{lab}</text>')
 
     # cam süpürmesi
