@@ -16,6 +16,11 @@
 
 </div>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/metrics-dark.svg" />
+  <img src="assets/metrics-light.svg" width="100%" alt="8 sektör, 40+ proje, 200+ backend modülü, 4 mobil uygulama" />
+</picture>
+
 ```
 ┌─ ÇALIŞTIĞIM ALANLAR ──────────────────────────────────────────────────────────┐
 │                                                                               │
@@ -32,11 +37,11 @@
 ```
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-dark.svg" />
-  <img src="assets/rule-light.svg" width="100%" alt="" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-a-dark.svg" />
+  <img src="assets/rule-a-light.svg" width="100%" alt="" />
 </picture>
 
-## Kısaca
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/marker-dark.svg" /><img src="assets/marker-light.svg" alt="" height="20" /></picture> Kısaca
 
 Yazılım işlerini uçtan uca alıyorum. Keşif görüşmesinden fizibiliteye, mimariden arayüz
 tasarımına, backend ve mobil geliştirmeden sunucuda yayına ve sonrasındaki işletime kadar
@@ -49,11 +54,11 @@ tekstilde CRM/ERP ile pazaryeri ve ödeme entegrasyonu, restoran işletim sistem
 ayrı Flutter uygulaması da aynı elden çıktı.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-dark.svg" />
-  <img src="assets/rule-light.svg" width="100%" alt="" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-b-dark.svg" />
+  <img src="assets/rule-b-light.svg" width="100%" alt="" />
 </picture>
 
-## Uçtan uca
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-uctan-uca-dark.svg" /><img src="assets/h-uctan-uca-light.svg" alt="Uçtan uca" width="100%" /></picture>
 
 | Aşama | Ne yapıyorum |
 |:--|:--|
@@ -68,11 +73,11 @@ ayrı Flutter uygulaması da aynı elden çıktı.
 | **Belgeleme** | Kullanım kılavuzu, runbook, teknik olmayan anlatım, satış sunumu. |
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-dark.svg" />
-  <img src="assets/rule-light.svg" width="100%" alt="" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-a-dark.svg" />
+  <img src="assets/rule-a-light.svg" width="100%" alt="" />
 </picture>
 
-## Derinlik
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-derinlik-dark.svg" /><img src="assets/h-derinlik-light.svg" alt="Derinlik" width="100%" /></picture>
 
 Katman başına, gerçekten uğraştığım türden sorunlar:
 
@@ -88,11 +93,16 @@ Katman başına, gerçekten uğraştığım türden sorunlar:
 | **Olay müdahalesi** | Ele geçirilmiş bir sitede forensic çıkarmak. Üretim veritabanlarını yedekten ayağa kaldırmak ve nedeni ortadan kaldıran düzeltmeyi hatta eklemek. |
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-dark.svg" />
-  <img src="assets/rule-light.svg" width="100%" alt="" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-b-dark.svg" />
+  <img src="assets/rule-b-light.svg" width="100%" alt="" />
 </picture>
 
-## Yığın
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-yigin-dark.svg" /><img src="assets/h-yigin-light.svg" alt="Yığın" width="100%" /></picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stackband-dark.svg" />
+  <img src="assets/stackband-light.svg" width="100%" alt="kullandığım teknolojiler" />
+</picture>
 
 <table>
 <tr>
@@ -130,11 +140,11 @@ Katman başına, gerçekten uğraştığım türden sorunlar:
 </table>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-dark.svg" />
-  <img src="assets/rule-light.svg" width="100%" alt="" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-a-dark.svg" />
+  <img src="assets/rule-a-light.svg" width="100%" alt="" />
 </picture>
 
-## Yakından
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-yakindan-dark.svg" /><img src="assets/h-yakindan-light.svg" alt="Yakından" width="100%" /></picture>
 
 <details>
 <summary><b>Multi-tenant yönetim platformu</b></summary>
@@ -219,11 +229,11 @@ siteleri, bilim merkezi, kamu ihale ve mevzuat modülü.
 </details>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-dark.svg" />
-  <img src="assets/rule-light.svg" width="100%" alt="" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-b-dark.svg" />
+  <img src="assets/rule-b-light.svg" width="100%" alt="" />
 </picture>
 
-## Nasıl çalışırım
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/marker-dark.svg" /><img src="assets/marker-light.svg" alt="" height="20" /></picture> Nasıl çalışırım
 
 Üretimle ilgili bir şey iddia etmeden önce ölçerim; "muhtemelen öyledir" bir cevap değil.
 Denetim kanıtı olabilecek kaydı silmem, arşivlerim. Şema değişikliği elle değil migration
@@ -231,8 +241,13 @@ ile gider. Geri dönüşü olmayan işlerde tek gözle yetinmem, biteni bağıms
 çalışırım. Deployment'ın fark edilmesi gerekmiyor; fark ediliyorsa hatta bir sorun var.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-dark.svg" />
-  <img src="assets/rule-light.svg" width="100%" alt="" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-a-dark.svg" />
+  <img src="assets/rule-a-light.svg" width="100%" alt="" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg" />
+  <img src="assets/footer-light.svg" width="100%" alt="" />
 </picture>
 
 <sub>Buradaki açık depolar eski öğrenci çalışmalarım. Güncel iş kurumsal özel depolarda
