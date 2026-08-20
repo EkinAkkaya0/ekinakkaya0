@@ -1,39 +1,31 @@
 <div align="center">
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/pipeline-dark.svg" />
-  <img src="assets/pipeline-light.svg" width="100%" alt="Ekin Akkaya — Full-Stack ve DevOps Engineer, projelendirmeden yayına uçtan uca" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/console-dark.svg" />
+  <img src="assets/console-light.svg" width="100%" alt="Ekin Doğucan Akkaya — Full-Stack ve DevOps Engineer, projelendirmeden yayına uçtan uca" />
 </picture>
 
+<a href="https://www.linkedin.com/in/ekin-dogucan-akkaya/"><img src="https://img.shields.io/badge/Ekin_Do%C4%9Fucan_Akkaya-30363D?style=flat-square&logo=linkedin&logoColor=0A66C2" alt="LinkedIn" /></a>
+<a href="mailto:ekinakkaya0@hotmail.com"><img src="https://img.shields.io/badge/ekinakkaya0%40hotmail.com-30363D?style=flat-square&logo=microsoftoutlook&logoColor=C9D1D9" alt="e-posta" /></a>
 <img src="https://img.shields.io/github/last-commit/ekinakkaya0/ekinakkaya0?style=flat-square&label=son%20g%C3%BCncelleme&labelColor=30363D&color=1A7F37&display_timestamp=author" alt="" />
 <img src="https://komarev.com/ghpvc/?username=ekinakkaya0&label=g%C3%B6r%C3%BCnt%C3%BClenme&color=30363D&style=flat-square" alt="" />
-<img src="https://img.shields.io/github/followers/ekinakkaya0?style=flat-square&logo=github&logoColor=C9D1D9&label=takip%C3%A7i&labelColor=30363D&color=30363D" alt="" />
 
-<!-- iletişim rozeti: adresi doldurup yorumdan çıkar
-<a href="mailto:ADRES@ornek.com"><img src="https://img.shields.io/badge/e--posta-30363D?style=flat-square&logo=gmail&logoColor=EA4335" alt="e-posta" /></a>
-<a href="https://www.linkedin.com/in/KULLANICI"><img src="https://img.shields.io/badge/linkedin-30363D?style=flat-square&logo=linkedin&logoColor=0A66C2" alt="LinkedIn" /></a>
--->
 
 </div>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/metrics-dark.svg" />
-  <img src="assets/metrics-light.svg" width="100%" alt="8 sektör, 40+ proje, 200+ backend modülü, 4 mobil uygulama" />
-</picture>
-
 ```
-┌─ ÇALIŞTIĞIM ALANLAR ──────────────────────────────────────────────────────────┐
-│                                                                               │
-│  kamu / belediye        multi-tenant yönetim platformu, CBS, vatandaş mobil   │
-│  tarım / agrotech       üretici platformu, QR izlenebilirlik, toprak analizi  │
-│  sanayi / üretim        stok ve sipariş takibi, CNC makine izleme             │
-│  perakende              CRM/ERP, pazaryeri ve ödeme entegrasyonu              │
-│  turizm / gastronomi    restoran işletim sistemi, otel, garson uygulaması     │
-│  spor kulüpleri         kurumsal site, üyelik, içerik yönetimi                │
-│  sivil toplum           istihdam platformu, kadın platformu, bilim merkezi    │
-│  kamu ihale / mevzuat   mevzuat ve teklif modülü                              │
-│                                                                               │
-└───────────────────────────────────────────────────────────────────────────────┘
+┌─ ÇALIŞTIĞIM ALANLAR ─────────────────────────────────────────┐
+│                                                              │
+│  kamu / belediye       multi-tenant platform, CBS, mobil     │
+│  tarım / agrotech      üretici platformu, QR izlenebilirlik  │
+│  sanayi / üretim       stok-sipariş takibi, CNC izleme       │
+│  perakende             CRM/ERP, pazaryeri ve ödeme           │
+│  turizm / gastronomi   restoran işletim sistemi, otel        │
+│  spor kulüpleri        kurumsal site, üyelik, içerik         │
+│  sivil toplum          istihdam ve kadın platformu           │
+│  kamu ihale            mevzuat ve teklif modülü              │
+│                                                              │
+└──────────────────────────────────────────────────────────────┘
 ```
 
 <picture>
