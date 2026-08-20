@@ -78,6 +78,10 @@ def streaks(days):
         else: break
     return longest, now
 
+def tr(n):
+    """Türkçe binlik ayracı: 5873 -> 5.873"""
+    return f"{n:,}".replace(",", ".")
+
 def build(p, cal, days, total, longest, now):
     W, H = 1000, 176
     CELL, GAP = 11, 2
@@ -125,10 +129,6 @@ def build(p, cal, days, total, longest, now):
     # sayaçlar
     SX = 790
     o.append(f'<line x1="{SX-24}" y1="24" x2="{SX-24}" y2="{H-24}" stroke="{p["edge"]}"/>')
-    def tr(n):
-        """Türkçe binlik ayracı: 5602 -> 5.602"""
-        return f"{n:,}".replace(",", ".")
-
     for i, (val, lab) in enumerate(((tr(total), "son 1 yıl"),
                                     (tr(longest) + " gün", "en uzun seri"),
                                     (tr(now) + " gün", "güncel seri"))):
@@ -148,7 +148,7 @@ def build(p, cal, days, total, longest, now):
             f'<stop offset="55%" stop-color="{p["sheen"]}" stop-opacity="{p["sheen_a"]}"/>'
             f'<stop offset="100%" stop-color="{p["sheen"]}" stop-opacity="0"/></linearGradient>')
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {W} {H}" width="{W}" height="{H}" '
-            f'role="img" aria-label="Son bir yılda {total} katkı, en uzun seri {longest} gün, güncel seri {now} gün">'
+            f'role="img" aria-label="Son bir yılda {tr(total)} katkı, en uzun seri {tr(longest)} gün, güncel seri {tr(now)} gün">'
             f'<defs>{defs}</defs>{"".join(o)}</svg>\n')
 
 def main():
