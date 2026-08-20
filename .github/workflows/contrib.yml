@@ -27,8 +27,6 @@ jobs:
 
       - name: Takvimi üret
         run: python tools/gen_contrib.py
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Değiştiyse işle
         run: |

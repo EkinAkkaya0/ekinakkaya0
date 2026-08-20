@@ -1,13 +1,22 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """GitHub katkı takvimini sayfanın cam diline uygun SVG olarak üretir.
-Her gün GitHub Actions ile yeniden koşar; assets/contrib-{light,dark}.svg yazar.
-Token: GH_TOKEN ortam değişkeni, yoksa `gh auth token`."""
-import json, os, subprocess, sys, urllib.request, pathlib, datetime
+
+Veri kaynağı: https://github.com/users/<login>/contributions — GitHub'ın profil
+sayfasında kullandığı genel uç nokta. Token gerektirmez ve tam olarak bir
+ziyaretçinin gördüğü sayıları verir. (GraphQL denendi ve bırakıldı: Actions'ın
+GITHUB_TOKEN'ı uygulama kimliğiyle sorguladığı için katkıları eksik sayıyor —
+ölçüldü, 36'ya karşı 42.)
+
+Her gün GitHub Actions ile koşar; assets/contrib-{light,dark}.svg yazar.
+"""
+import re, sys, urllib.request, pathlib
 
 USER = "ekinakkaya0"
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 MONO = "'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace"
+UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
+      "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
 
 LIGHT = dict(name="light", card="#FFFFFF", edge="#D0D7DE", ink="#0D1117", sub="#57606A",
              faint="#8C959F", ok="#1A7F37", sheen="#0D1117", sheen_a=0.055, rim=None, rim_a=0,
@@ -18,25 +27,42 @@ DARK  = dict(name="dark", card="#0D1117", edge="#30363D", ink="#E6EDF3", sub="#8
 
 AY = ["Oca","Şub","Mar","Nis","May","Haz","Tem","Ağu","Eyl","Eki","Kas","Ara"]
 
-def token():
-    t = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
-    if t: return t
-    return subprocess.run(["gh", "auth", "token"], capture_output=True, text=True).stdout.strip()
+TD  = re.compile(r'<td\b[^>]*class="[^"]*ContributionCalendar-day[^"]*"[^>]*>')
+TIP = re.compile(r'<tool-tip\b[^>]*\bfor="([^"]+)"[^>]*>(.*?)</tool-tip>', re.S)
+ATTR = lambda tag, name: (re.search(name + r'="([^"]*)"', tag) or [None, None])[1]
 
 def fetch():
-    q = """query($login:String!){ user(login:$login){ contributionsCollection{
-      contributionCalendar{ totalContributions
-        weeks{ contributionDays{ date weekday contributionCount contributionLevel } } } } } }"""
-    body = json.dumps({"query": q, "variables": {"login": USER}}).encode()
-    req = urllib.request.Request("https://api.github.com/graphql", data=body,
-        headers={"Authorization": f"bearer {token()}", "Content-Type": "application/json",
-                 "User-Agent": "contrib-svg"})
+    """Genel katkı takvimini çeker; (haftalar, toplam) döndürür."""
+    req = urllib.request.Request(f"https://github.com/users/{USER}/contributions",
+                                 headers={"User-Agent": UA})
     with urllib.request.urlopen(req, timeout=45) as r:
-        d = json.load(r)
-    if "errors" in d: sys.exit("GraphQL hatası: " + json.dumps(d["errors"])[:400])
-    return d["data"]["user"]["contributionsCollection"]["contributionCalendar"]
+        html = r.read().decode("utf-8", "replace")
 
-LEVELS = {"NONE":0, "FIRST_QUARTILE":1, "SECOND_QUARTILE":2, "THIRD_QUARTILE":3, "FOURTH_QUARTILE":4}
+    counts = {}
+    for tid, text in TIP.findall(html):
+        m = re.search(r"([\d,]+)\s+contribution", text)
+        counts[tid] = int(m.group(1).replace(",", "")) if m else 0
+
+    cols = {}
+    for tag in TD.findall(html):
+        date = ATTR(tag, "data-date")
+        if not date:
+            continue
+        did = ATTR(tag, "id") or ""
+        m = re.match(r"contribution-day-component-(\d+)-(\d+)$", did)
+        weekday, week = (int(m.group(1)), int(m.group(2))) if m else (0, len(cols))
+        cols.setdefault(week, []).append({
+            "date": date,
+            "weekday": weekday,
+            "contributionCount": counts.get(did, 0),
+            "level": int(ATTR(tag, "data-level") or 0),
+        })
+
+    if not cols:
+        sys.exit("katkı takvimi ayrıştırılamadı — GitHub biçimi değişmiş olabilir")
+    weeks = [{"contributionDays": cols[k]} for k in sorted(cols)]
+    total = sum(d["contributionCount"] for w in weeks for d in w["contributionDays"])
+    return {"weeks": weeks, "totalContributions": total}
 
 def streaks(days):
     """en uzun ve güncel seri (bugün boşsa dünden geriye bakar)."""
@@ -81,7 +107,7 @@ def build(p, cal, days, total, longest, now):
     for wi, wk in enumerate(weeks):
         ph = round(wi / max(1, n), 4)
         for day in wk["contributionDays"]:
-            lv = LEVELS.get(day["contributionLevel"], 0)
+            lv = min(4, max(0, day["level"]))
             x = GX + wi*PITCH; y = GY + day["weekday"]*PITCH
             a = round(max(0.0, ph-0.02), 4); b = round(min(1.0, ph+0.06), 4)
             o.append(f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="2.5" fill="{p["lv"][lv]}" opacity="0.78">'
