@@ -238,17 +238,28 @@ ile gider. Geri dönüşü olmayan işlerde tek gözle yetinmem, biteni bağıms
 </picture>
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-b-dark.svg" />
+  <img src="assets/rule-b-light.svg" width="100%" alt="" />
+</picture>
+
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/marker-dark.svg" /><img src="assets/marker-light.svg" alt="" height="20" /></picture> Aktivite
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/contrib-dark.svg" />
+  <img src="assets/contrib-light.svg" width="100%" alt="katkı takvimi" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ekinakkaya0/ekinakkaya0/output/github-snake-dark.svg" />
+  <img src="https://raw.githubusercontent.com/ekinakkaya0/ekinakkaya0/output/github-snake.svg" width="100%" alt="katkı grafiğinde dolaşan yılan" />
+</picture>
+
+<sub>Takvim seyrek görünüyor çünkü commit'lerim kurumsal özel depolara, GitHub hesabıma bağlı
+olmayan bir e-posta adresiyle gidiyor; GitHub bu katkıları hiçbir profile yazmıyor. Buradaki açık
+depolar ise eski öğrenci çalışmalarım. Takvim her gün bir GitHub Action ile yeniden üretiliyor.</sub>
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/footer-dark.svg" />
   <img src="assets/footer-light.svg" width="100%" alt="" />
 </picture>
 
-<sub>Buradaki açık depolar eski öğrenci çalışmalarım. Güncel iş kurumsal özel depolarda
-yürüdüğü için katkı grafiği bu profil hakkında bir şey söylemiyor.</sub>
-
-<!--
-  AKTİVİTE BÖLÜMÜ — kapalı. Commit'ler ekinakkaya1@hotmail.com ile atılıyor ama bu adres
-  GitHub hesabına doğrulanmış olarak ekli değil, dolayısıyla katkılar hiçbir profile
-  yazılmıyor (ölçüm 20.08.2026: son 1 yıl 36 katkı, gizli katkı 0, güncel seri 0).
-  Açmak için: (1) Settings > Emails'e o adresi ekle ve doğrula, (2) Settings > Public
-  profile > Include private contributions on my profile, (3) yılan/seri kartlarını ekle.
--->
