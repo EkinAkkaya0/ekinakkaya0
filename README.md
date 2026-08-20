@@ -1,299 +1,221 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:8B5CF6,45:6366F1,100:06B6D4&height=210&section=header&text=Ekin%20Akkaya&fontSize=56&fontColor=FFFFFF&fontAlignY=34&desc=Platform%20M%C3%BChendisi%20%20%C2%B7%20%20Full-Stack%20%20%C2%B7%20%20CBS%20%20%C2%B7%20%20DevOps&descAlignY=53&descSize=17&animation=fadeIn" alt="Ekin Akkaya" width="100%" />
+<img src="assets/header.svg" width="100%" alt="Ekin Akkaya — Platform Mühendisi" />
 
-<a href="https://github.com/ekinakkaya0"><img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=21&duration=3600&pause=700&color=22D3EE&center=true&vCenter=true&width=780&height=46&lines=Kamu%20kurumlar%C4%B1%20i%C3%A7in%20%C3%A7ok%20kirac%C4%B1l%C4%B1%20y%C3%B6netim%20platformlar%C4%B1%20kuruyorum;Co%C4%9Frafi%20veriyi%20PostGIS%20ve%20GeoServer%20ile%20haritaya%20d%C3%B6n%C3%BC%C5%9Ft%C3%BCr%C3%BCyorum;S%C4%B1f%C4%B1r%20kesintili%20mavi-ye%C5%9Fil%20da%C4%9F%C4%B1t%C4%B1m%20hatlar%C4%B1%20i%C5%9Fletiyorum;Kaynak%20kodu%20olmayan%20eski%20sistemleri%20tersine%20m%C3%BChendislikle%20yeniden%20yaz%C4%B1yorum" alt="Ne yapıyorum" /></a>
+<img src="assets/typing.svg" width="72%" alt="Ne yaptığımın kısa dökümü" />
 
-<img src="https://komarev.com/ghpvc/?username=ekinakkaya0&label=Profil%20G%C3%B6r%C3%BCnt%C3%BClenme&color=A855F7&style=for-the-badge" alt="Profil görüntülenme" />
-<img src="https://img.shields.io/github/followers/ekinakkaya0?style=for-the-badge&logo=github&logoColor=22D3EE&label=Takip%C3%A7i&labelColor=0D1117&color=0D1117" alt="Takipçi" />
-<img src="https://img.shields.io/badge/Konum-T%C3%BCrkiye-34D399?style=for-the-badge&labelColor=0D1117" alt="Konum" />
-<img src="https://img.shields.io/badge/Odak-Kamu_Teknolojileri-06B6D4?style=for-the-badge&labelColor=0D1117" alt="Odak" />
+<img src="https://img.shields.io/github/last-commit/ekinakkaya0/ekinakkaya0?style=flat-square&label=son%20g%C3%BCncelleme&labelColor=0D1117&color=22D3EE&display_timestamp=author" alt="son güncelleme" />
+<img src="https://komarev.com/ghpvc/?username=ekinakkaya0&label=g%C3%B6r%C3%BCnt%C3%BClenme&color=6366F1&style=flat-square" alt="görüntülenme" />
+<img src="https://img.shields.io/github/followers/ekinakkaya0?style=flat-square&logo=github&logoColor=C9D1D9&label=takip%C3%A7i&labelColor=0D1117&color=A855F7" alt="takipçi" />
+<img src="https://img.shields.io/badge/konum-T%C3%BCrkiye-34D399?style=flat-square&labelColor=0D1117" alt="konum" />
 
-<!--
-  İletişim rozeti eklemek istersen aşağıdaki satırların yorumunu kaldırıp bilgileri doldur
-  ve bunları yukarıdaki rozet bloğunun içine taşı:
-  <a href="mailto:ADRESIN@ornek.com"><img src="https://img.shields.io/badge/E--posta-0D1117?style=for-the-badge&logo=gmail&logoColor=EA4335" alt="E-posta" /></a>
-  <a href="https://www.linkedin.com/in/KULLANICI-ADIN"><img src="https://img.shields.io/badge/LinkedIn-0D1117?style=for-the-badge&logo=linkedin&logoColor=0A66C2" alt="LinkedIn" /></a>
+<!-- İletişim rozeti eklemek istersen aşağıdakileri doldurup bu yorumdan çıkar:
+<a href="mailto:ADRES@ornek.com"><img src="https://img.shields.io/badge/e--posta-161B22?style=flat-square&logo=gmail&logoColor=EA4335" alt="e-posta" /></a>
+<a href="https://www.linkedin.com/in/KULLANICI"><img src="https://img.shields.io/badge/linkedin-161B22?style=flat-square&logo=linkedin&logoColor=0A66C2" alt="LinkedIn" /></a>
 -->
 
 </div>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:8B5CF6,50:6366F1,100:06B6D4&height=2&section=header" width="100%" height="2" alt="" />
+```
+╭────────────────────────────────────────────────────────────────╮
+│                                                                │
+│  $ whoami                                                      │
+│  ekin akkaya · platform mühendisi                              │
+│                                                                │
+│  $ ls ~/uretim                                                 │
+│  cok-kiracili-platform/     jeo-uzamsal-veri/                  │
+│  sifir-kesintili-dagitim/   kapali-ag-kurulum/                 │
+│                                                                │
+│  $ tail -1 /var/log/deploy.log                                 │
+│  promote ok · upstream devredildi · kesinti yok                │
+│                                                                │
+╰────────────────────────────────────────────────────────────────╯
+```
+
+<img src="assets/divider.svg" width="100%" height="4" alt="" />
 
 ## Kısaca
 
-Tek bir kod tabanından, **her kuruma kendi veritabanı** verilen kamu yönetim platformları kuruyorum.
-İş, vatandaşın mobil başvurusundan imar paftasının vektör karosuna ve sunucudaki mavi-yeşil
-dağıtım hattına kadar uzanıyor — ürünün hem yazılımını hem de üstünde koştuğu makineyi ayakta tutuyorum.
+Belediyelerin bütün işini tek panelde toplayan bir yönetim sistemi yazıyorum. Kod tek,
+her kurum kendi veritabanında duruyor. Şu an 200'ün üzerinde backend modülü ve 43 panel
+modülü var.
 
-- 🏛 &nbsp;**200'ü aşkın backend modülü** ve **43 panel modülü** tek platformda, tek kimlik ve tek izin matrisiyle
-- 🗺 &nbsp;**CAD paftasından 3B vektör karoya** uzanan uçtan uca coğrafi veri hattı
-- 🚀 &nbsp;**Otomatik geri almalı, sıfır kesintili dağıtım** — elle container yeniden başlatmak yasak
-- 📦 &nbsp;**İnternete kapalı kuruma USB ile tek komut kurulum**, sahada uçtan uca doğrulanmış
-- 🧭 &nbsp;Kaynak kodu olmayan eski kurumsal sistemleri **decompile edip parite denetimiyle** yeniden yazıyorum
+İş uygulama katmanıyla bitmiyor. Sistemin koştuğu makineler, dağıtım hattı, izleme
+zinciri, yedekler ve sertifikalar da bende. Gece bir şey patlarsa aranan kişi benim.
+
+Son dönemde uğraştıklarım kabaca şöyle: imar paftasının CAD dosyasından çıkıp tarayıcıda
+vektör karo olarak açılması, internete kapalı bir belediye sunucusuna USB'yle kurulum,
+yirmi küsur kiracıya aynı anda migration, Postfix'in SNI haritasının sertifika
+yenilemesinden sonra neden bayat kaldığı.
 
 > [!NOTE]
-> Buradaki açık depoların çoğu eski öğrenci çalışmalarım. Güncel işlerimin tamamı kurumsal
-> özel depolarda yürüdüğü için katkı sayıları bu profilin tamamını anlatmaz — anlattıklarım aşağıda.
+> Buradaki açık depolar eski öğrenci çalışmalarım. Asıl iş kurumsal özel depolarda
+> yürüdüğü için katkı grafiği bu profil hakkında pek bir şey söylemiyor.
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:8B5CF6,50:6366F1,100:06B6D4&height=2&section=header" width="100%" height="2" alt="" />
+<img src="assets/divider.svg" width="100%" height="4" alt="" />
 
-## Ne üstünde çalışıyorum
+## Uzmanlık
 
-| Alan | Ne inşa ediyorum | Çekirdek yığın |
-|:--|:--|:--|
-| **🏛 Platform** | Kiracı-başına-veritabanı mimarisiyle çok kiracılı yönetim sistemi; rol–izin matrisi, denetim izi, mali muhasebe ve bütçe motoru | Node.js · Express · Sequelize · PostgreSQL |
-| **🗺 CBS** | İmar planı, kaçak yapı ve yapı ruhsatı katmanları; sunucuda pişirilen vektör karolar, 3B bina görselleştirme | PostGIS · GeoServer · OpenLayers · GDAL |
-| **💻 Ön yüz** | 40'tan fazla müdürlük paneli, gerçek zamanlı bildirim, harita gömülü iş akışları | Next.js · React · MUI · Tailwind |
-| **⚙️ Altyapı** | Mavi-yeşil dağıtım, izleme–alarm zinciri, yedekleme ve geri yükleme, TLS ve posta sunucusu otomasyonu | Docker · nginx · GitHub Actions · Linux |
-| **📱 Mobil & entegrasyon** | Vatandaş mobil uygulaması için REST API, araç takip / tek oturum açma / haber akışı entegrasyonları | REST · Socket.io · FastAPI |
+Bir konuyu bildiğimi söyleyebilmem için o konunun bozulduğu yeri görmüş olmam gerekiyor.
+Aşağıdaki tablo hangi katmanda ne kadar derine indiğimi, uydurma yetkinlik listesiyle
+değil kendi çözdüğüm arızalarla anlatıyor.
 
-<div align="center">
+### Derinlik
 
-  <img src="https://img.shields.io/badge/Mimari-kirac%C4%B1_ba%C5%9F%C4%B1na_ayr%C4%B1_veritaban%C4%B1-A855F7?style=for-the-badge&labelColor=0D1117" alt="" />
-  <img src="https://img.shields.io/badge/Backend_mod%C3%BCl%C3%BC-200%2B-06B6D4?style=for-the-badge&labelColor=0D1117" alt="" />
-  <img src="https://img.shields.io/badge/Panel_mod%C3%BCl%C3%BC-43-34D399?style=for-the-badge&labelColor=0D1117" alt="" />
-  <img src="https://img.shields.io/badge/Backend_testi-4800%2B-FBBF24?style=for-the-badge&labelColor=0D1117" alt="" />
-  <img src="https://img.shields.io/badge/Da%C4%9F%C4%B1t%C4%B1m-mavi--ye%C5%9Fil_%C2%B7_s%C4%B1f%C4%B1r_kesinti-FB7185?style=for-the-badge&labelColor=0D1117" alt="" />
+| Katman | Elimle çözdüğüm türden sorunlar |
+|:--|:--|
+| **HTTP kenarı** | Mavi-yeşil geçişte ters vekilin yukarı akışını devretmek. Tek dosya olarak bind-mount edilmiş bir yapılandırmanın konteynere hiç inmemesi (bayat inode) ve `nginx -s reload` ile kurtarılamaması. |
+| **PostgreSQL** | Kiracı rollerinin grant kaybından sonra gelen `permission denied for table`. `pg_restore`'un dolu bir şemaya ekleme yapıp kayıtları ikiye katlaması. Migration'ın bütün aktif kiracılara sırayla uygulanması. |
+| **Jeo-uzamsal veri** | Yanlış etiketlenmiş EPSG tanımları ve CAD kaynaklı koordinat kayması. `gpkg_extensions` tablosu olmadan GeoServer'ın GeoPackage katmanını hiç görmemesi. SLD ile referans imar yazılımına piksel düzeyinde renk eşleme. |
+| **Uygulama** | Kilitsiz seri numarası üretiminin yarış koşulu. Alan adı beyaz listede olmadığı için API eşleyicisinin veriyi sessizce düşürüp `notNull` hatası vermesi. Mali hesapta kayan noktalı sayının yasak olduğu yerler. |
+| **Sistem** | 30 GB'a dayanan bir Next.js derlemesi için takas alanı açmak. Kendi barındırdığım koşucuların topluca kaydının düşmesi. systemd birimleri, disk baskısı, arşivleme. |
+| **Posta ve TLS** | Postfix SNI haritasının sertifika yenilemesinden sonra bayat kalması ve `postmap -F` olmadan çözülmemesi. Birbirini ezen iki ayrı certbot ağacı. |
 
-</div>
+### Genişlik
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:8B5CF6,50:6366F1,100:06B6D4&height=2&section=header" width="100%" height="2" alt="" />
+Katman ayırt etmiyorum. Vatandaş mobil uygulamasının REST API'si, tek oturum açma
+vekilleri, araç takip entegrasyonu, GTFS beslemeli toplu taşıma rota planlayıcı, görüntü
+işleme hattını besleyen ayrı bir FastAPI servisi, S3 uyumlu nesne depolama, yedekleme ve
+geri yükleme, VPN üzerinden kurum içi sunucuya bağlanıp on-prem kurulumla uğraşmak,
+kapalı ağ için USB kurulum paketi hazırlamak, mali muhasebe ve bütçe motoru, rol-izin
+matrisi, denetim izi, gerçek zamanlı bildirim. Hepsi aynı sistemin parçası ve hepsine
+bakan aynı kişiyim.
 
-## Yığın
+<img src="assets/divider.svg" width="100%" height="4" alt="" />
+
+## Teknoloji Yığını
 
 <table>
-<tr><td valign="top" width="50%">
-
-**Backend & Veri**
-
-  <img src="https://img.shields.io/badge/Node.js-0D1117?style=for-the-badge&logo=nodedotjs&logoColor=5FA04E&labelColor=0D1117" alt="Node.js" />
-  <img src="https://img.shields.io/badge/Express-0D1117?style=for-the-badge&logo=express&logoColor=FFFFFF&labelColor=0D1117" alt="Express" />
-  <img src="https://img.shields.io/badge/Sequelize-0D1117?style=for-the-badge&logo=sequelize&logoColor=52B0E7&labelColor=0D1117" alt="Sequelize" />
-  <img src="https://img.shields.io/badge/PostgreSQL-0D1117?style=for-the-badge&logo=postgresql&logoColor=4169E1&labelColor=0D1117" alt="PostgreSQL" />
-  <img src="https://img.shields.io/badge/Socket.io-0D1117?style=for-the-badge&logo=socketdotio&logoColor=FFFFFF&labelColor=0D1117" alt="Socket.io" />
-  <img src="https://img.shields.io/badge/Python-0D1117?style=for-the-badge&logo=python&logoColor=3776AB&labelColor=0D1117" alt="Python" />
-  <img src="https://img.shields.io/badge/FastAPI-0D1117?style=for-the-badge&logo=fastapi&logoColor=009688&labelColor=0D1117" alt="FastAPI" />
-
-</td><td valign="top" width="50%">
-
-**Ön Yüz**
-
-  <img src="https://img.shields.io/badge/Next.js-0D1117?style=for-the-badge&logo=nextdotjs&logoColor=FFFFFF&labelColor=0D1117" alt="Next.js" />
-  <img src="https://img.shields.io/badge/React-0D1117?style=for-the-badge&logo=react&logoColor=61DAFB&labelColor=0D1117" alt="React" />
-  <img src="https://img.shields.io/badge/TypeScript-0D1117?style=for-the-badge&logo=typescript&logoColor=3178C6&labelColor=0D1117" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/JavaScript-0D1117?style=for-the-badge&logo=javascript&logoColor=F7DF1E&labelColor=0D1117" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/MUI-0D1117?style=for-the-badge&logo=mui&logoColor=007FFF&labelColor=0D1117" alt="MUI" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-0D1117?style=for-the-badge&logo=tailwindcss&logoColor=06B6D4&labelColor=0D1117" alt="Tailwind CSS" />
-
-</td></tr>
-<tr><td valign="top">
-
-**Coğrafi Bilgi Sistemleri**
-
-  <img src="https://img.shields.io/badge/PostGIS-0D1117?style=for-the-badge&logo=postgresql&logoColor=22D3EE&labelColor=0D1117" alt="PostGIS" />
-  <img src="https://img.shields.io/badge/GeoServer-0D1117?style=for-the-badge&logo=osgeo&logoColor=4CAF50&labelColor=0D1117" alt="GeoServer" />
-  <img src="https://img.shields.io/badge/OpenLayers-0D1117?style=for-the-badge&logo=openlayers&logoColor=4FC3F7&labelColor=0D1117" alt="OpenLayers" />
-  <img src="https://img.shields.io/badge/Leaflet-0D1117?style=for-the-badge&logo=leaflet&logoColor=7CB342&labelColor=0D1117" alt="Leaflet" />
-  <img src="https://img.shields.io/badge/QGIS-0D1117?style=for-the-badge&logo=qgis&logoColor=8BC34A&labelColor=0D1117" alt="QGIS" />
-  <img src="https://img.shields.io/badge/GDAL-0D1117?style=for-the-badge&logo=gdal&logoColor=5CAE58&labelColor=0D1117" alt="GDAL" />
-  <img src="https://img.shields.io/badge/OpenStreetMap-0D1117?style=for-the-badge&logo=openstreetmap&logoColor=7EBC6F&labelColor=0D1117" alt="OpenStreetMap" />
-
-</td><td valign="top">
-
-**Altyapı & DevOps**
-
-  <img src="https://img.shields.io/badge/Docker-0D1117?style=for-the-badge&logo=docker&logoColor=2496ED&labelColor=0D1117" alt="Docker" />
-  <img src="https://img.shields.io/badge/NGINX-0D1117?style=for-the-badge&logo=nginx&logoColor=2ECC71&labelColor=0D1117" alt="NGINX" />
-  <img src="https://img.shields.io/badge/GitHub_Actions-0D1117?style=for-the-badge&logo=githubactions&logoColor=58A6FF&labelColor=0D1117" alt="GitHub Actions" />
-  <img src="https://img.shields.io/badge/Linux-0D1117?style=for-the-badge&logo=linux&logoColor=FCC624&labelColor=0D1117" alt="Linux" />
-  <img src="https://img.shields.io/badge/Ubuntu-0D1117?style=for-the-badge&logo=ubuntu&logoColor=E95420&labelColor=0D1117" alt="Ubuntu" />
-  <img src="https://img.shields.io/badge/MinIO-0D1117?style=for-the-badge&logo=minio&logoColor=F87171&labelColor=0D1117" alt="MinIO" />
-  <img src="https://img.shields.io/badge/Grafana-0D1117?style=for-the-badge&logo=grafana&logoColor=F46800&labelColor=0D1117" alt="Grafana" />
-  <img src="https://img.shields.io/badge/Sentry-0D1117?style=for-the-badge&logo=sentry&logoColor=A78BFA&labelColor=0D1117" alt="Sentry" />
-  <img src="https://img.shields.io/badge/Let%27s_Encrypt-0D1117?style=for-the-badge&logo=letsencrypt&logoColor=5EA9E8&labelColor=0D1117" alt="Let's Encrypt" />
-
-</td></tr>
-<tr><td valign="top" colspan="2">
-
-**Araçlar & Yapay Zekâ**
-
-  <img src="https://img.shields.io/badge/Git-0D1117?style=for-the-badge&logo=git&logoColor=F05032&labelColor=0D1117" alt="Git" />
-  <img src="https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=FFFFFF&labelColor=0D1117" alt="GitHub" />
-  <img src="https://img.shields.io/badge/Claude-0D1117?style=for-the-badge&logo=claude&logoColor=D97757&labelColor=0D1117" alt="Claude" />
-  <img src="https://img.shields.io/badge/OpenAI-0D1117?style=for-the-badge&logo=openai&logoColor=FFFFFF&labelColor=0D1117" alt="OpenAI" />
-  <img src="https://img.shields.io/badge/Telegram-0D1117?style=for-the-badge&logo=telegram&logoColor=26A5E4&labelColor=0D1117" alt="Telegram" />
-  <img src="https://img.shields.io/badge/Obsidian-0D1117?style=for-the-badge&logo=obsidian&logoColor=A78BFA&labelColor=0D1117" alt="Obsidian" />
-
-</td></tr>
+<tr>
+<td valign="middle" width="26%"><b>Çalışma Zamanı &amp; API Katmanı</b></td>
+<td valign="middle"><img src="https://img.shields.io/badge/Node.js-1F2937?style=flat-square&labelColor=1F2937&logo=nodedotjs&logoColor=5FA04E" alt="Node.js" /> <img src="https://img.shields.io/badge/Express-1F2937?style=flat-square&labelColor=1F2937&logo=express&logoColor=E6EDF3" alt="Express" /> <img src="https://img.shields.io/badge/ES_Modules-1F2937?style=flat-square&labelColor=1F2937" alt="ES Modules" /> <img src="https://img.shields.io/badge/Socket.IO-1F2937?style=flat-square&labelColor=1F2937&logo=socketdotio&logoColor=E6EDF3" alt="Socket.IO" /> <img src="https://img.shields.io/badge/REST-1F2937?style=flat-square&labelColor=1F2937" alt="REST" /> <img src="https://img.shields.io/badge/Python-1F2937?style=flat-square&labelColor=1F2937&logo=python&logoColor=3776AB" alt="Python" /> <img src="https://img.shields.io/badge/FastAPI-1F2937?style=flat-square&labelColor=1F2937&logo=fastapi&logoColor=009688" alt="FastAPI" /></td>
+</tr>
+<tr>
+<td valign="middle" width="26%"><b>Kalıcılık &amp; Şema Yönetimi</b></td>
+<td valign="middle"><img src="https://img.shields.io/badge/PostgreSQL-1F2937?style=flat-square&labelColor=1F2937&logo=postgresql&logoColor=4169E1" alt="PostgreSQL" /> <img src="https://img.shields.io/badge/Sequelize_ORM-1F2937?style=flat-square&labelColor=1F2937&logo=sequelize&logoColor=52B0E7" alt="Sequelize ORM" /> <img src="https://img.shields.io/badge/Migration_Hatt%C4%B1-1F2937?style=flat-square&labelColor=1F2937" alt="Migration Hattı" /> <img src="https://img.shields.io/badge/Transaction_%2F_ACID-1F2937?style=flat-square&labelColor=1F2937" alt="Transaction / ACID" /> <img src="https://img.shields.io/badge/Decimal_Aritmeti%C4%9Fi-1F2937?style=flat-square&labelColor=1F2937" alt="Decimal Aritmetiği" /> <img src="https://img.shields.io/badge/%C3%87ok_Kirac%C4%B1l%C4%B1_%C4%B0zolasyon-1F2937?style=flat-square&labelColor=1F2937" alt="Çok Kiracılı İzolasyon" /></td>
+</tr>
+<tr>
+<td valign="middle" width="26%"><b>Jeo-uzamsal Veri &amp; Kartografya</b></td>
+<td valign="middle"><img src="https://img.shields.io/badge/PostGIS-1F2937?style=flat-square&labelColor=1F2937&logo=postgresql&logoColor=22D3EE" alt="PostGIS" /> <img src="https://img.shields.io/badge/GeoServer-1F2937?style=flat-square&labelColor=1F2937&logo=osgeo&logoColor=4CAF50" alt="GeoServer" /> <img src="https://img.shields.io/badge/GDAL_%2F_OGR-1F2937?style=flat-square&labelColor=1F2937&logo=gdal&logoColor=5CAE58" alt="GDAL / OGR" /> <img src="https://img.shields.io/badge/QGIS-1F2937?style=flat-square&labelColor=1F2937&logo=qgis&logoColor=8BC34A" alt="QGIS" /> <img src="https://img.shields.io/badge/OGC_WMS_%2F_WFS-1F2937?style=flat-square&labelColor=1F2937" alt="OGC WMS / WFS" /> <img src="https://img.shields.io/badge/Vekt%C3%B6r_Karo_%28MVT%29-1F2937?style=flat-square&labelColor=1F2937" alt="Vektör Karo (MVT)" /> <img src="https://img.shields.io/badge/SLD-1F2937?style=flat-square&labelColor=1F2937" alt="SLD" /> <img src="https://img.shields.io/badge/EPSG_%2F_CRS-1F2937?style=flat-square&labelColor=1F2937" alt="EPSG / CRS" /> <img src="https://img.shields.io/badge/GeoPackage-1F2937?style=flat-square&labelColor=1F2937" alt="GeoPackage" /></td>
+</tr>
+<tr>
+<td valign="middle" width="26%"><b>İstemci &amp; Arayüz Katmanı</b></td>
+<td valign="middle"><img src="https://img.shields.io/badge/Next.js-1F2937?style=flat-square&labelColor=1F2937&logo=nextdotjs&logoColor=E6EDF3" alt="Next.js" /> <img src="https://img.shields.io/badge/React-1F2937?style=flat-square&labelColor=1F2937&logo=react&logoColor=61DAFB" alt="React" /> <img src="https://img.shields.io/badge/TypeScript-1F2937?style=flat-square&labelColor=1F2937&logo=typescript&logoColor=3178C6" alt="TypeScript" /> <img src="https://img.shields.io/badge/MUI-1F2937?style=flat-square&labelColor=1F2937&logo=mui&logoColor=007FFF" alt="MUI" /> <img src="https://img.shields.io/badge/Tailwind_CSS-1F2937?style=flat-square&labelColor=1F2937&logo=tailwindcss&logoColor=06B6D4" alt="Tailwind CSS" /> <img src="https://img.shields.io/badge/OpenLayers-1F2937?style=flat-square&labelColor=1F2937&logo=openlayers&logoColor=4FC3F7" alt="OpenLayers" /> <img src="https://img.shields.io/badge/Leaflet-1F2937?style=flat-square&labelColor=1F2937&logo=leaflet&logoColor=7CB342" alt="Leaflet" /></td>
+</tr>
+<tr>
+<td valign="middle" width="26%"><b>Dağıtım &amp; Sürüm Yönetimi</b></td>
+<td valign="middle"><img src="https://img.shields.io/badge/Docker-1F2937?style=flat-square&labelColor=1F2937&logo=docker&logoColor=2496ED" alt="Docker" /> <img src="https://img.shields.io/badge/GitHub_Actions-1F2937?style=flat-square&labelColor=1F2937&logo=githubactions&logoColor=58A6FF" alt="GitHub Actions" /> <img src="https://img.shields.io/badge/NGINX-1F2937?style=flat-square&labelColor=1F2937&logo=nginx&logoColor=2ECC71" alt="NGINX" /> <img src="https://img.shields.io/badge/Mavi--Ye%C5%9Fil_Ge%C3%A7i%C5%9F-1F2937?style=flat-square&labelColor=1F2937" alt="Mavi-Yeşil Geçiş" /> <img src="https://img.shields.io/badge/GHCR-1F2937?style=flat-square&labelColor=1F2937" alt="GHCR" /> <img src="https://img.shields.io/badge/Kapal%C4%B1_A%C4%9F_Paketleme-1F2937?style=flat-square&labelColor=1F2937" alt="Kapalı Ağ Paketleme" /></td>
+</tr>
+<tr>
+<td valign="middle" width="26%"><b>Gözlemlenebilirlik &amp; Sistem Yönetimi</b></td>
+<td valign="middle"><img src="https://img.shields.io/badge/Linux-1F2937?style=flat-square&labelColor=1F2937&logo=linux&logoColor=FCC624" alt="Linux" /> <img src="https://img.shields.io/badge/Ubuntu-1F2937?style=flat-square&labelColor=1F2937&logo=ubuntu&logoColor=E95420" alt="Ubuntu" /> <img src="https://img.shields.io/badge/Grafana-1F2937?style=flat-square&labelColor=1F2937&logo=grafana&logoColor=F46800" alt="Grafana" /> <img src="https://img.shields.io/badge/Sentry_%2F_GlitchTip-1F2937?style=flat-square&labelColor=1F2937&logo=sentry&logoColor=A78BFA" alt="Sentry / GlitchTip" /> <img src="https://img.shields.io/badge/MinIO_%2F_S3-1F2937?style=flat-square&labelColor=1F2937&logo=minio&logoColor=F87171" alt="MinIO / S3" /> <img src="https://img.shields.io/badge/Postfix_%2F_Dovecot-1F2937?style=flat-square&labelColor=1F2937" alt="Postfix / Dovecot" /> <img src="https://img.shields.io/badge/Let%27s_Encrypt-1F2937?style=flat-square&labelColor=1F2937&logo=letsencrypt&logoColor=5EA9E8" alt="Let's Encrypt" /></td>
+</tr>
 </table>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:8B5CF6,50:6366F1,100:06B6D4&height=2&section=header" width="100%" height="2" alt="" />
+<img src="assets/divider.svg" width="100%" height="4" alt="" />
 
-## Mimari — kurduğum sistem tek bakışta
-
-```mermaid
-flowchart LR
-    subgraph IST["İstemci"]
-        direction TB
-        W["Yönetim Paneli<br/>Next.js · React"]
-        M["Vatandaş Mobil<br/>REST"]
-    end
-
-    N["nginx<br/>ters vekil · TLS<br/>mavi-yeşil geçiş"]
-
-    subgraph UYG["Uygulama"]
-        direction TB
-        T{{"kiracı çözücü<br/>istek başlığından"}}
-        A["Express API<br/>200+ modül"]
-        P["RBAC<br/>rol → izin"]
-    end
-
-    subgraph VER["Veri"]
-        direction TB
-        MA[("master DB<br/>global yapılandırma")]
-        D[("kiracı DB × N<br/>kuruma özel")]
-        S[("S3 uyumlu<br/>nesne depolama")]
-    end
-
-    subgraph CBS["Coğrafi Katman"]
-        direction TB
-        G[("PostGIS<br/>geo şeması")]
-        GS["GeoServer<br/>WMS · WFS · MVT<br/>→ haritaya vektör karo"]
-    end
-
-    W --> N
-    M --> N
-    N --> T
-    T --> A
-    A --> P
-    T --> MA
-    T --> D
-    A --> S
-    D --> G
-    G --> GS
-
-    classDef ist fill:#0D1117,stroke:#22D3EE,stroke-width:2px,color:#E6EDF3
-    classDef ken fill:#0D1117,stroke:#34D399,stroke-width:2px,color:#E6EDF3
-    classDef uyg fill:#0D1117,stroke:#A855F7,stroke-width:2px,color:#E6EDF3
-    classDef ver fill:#0D1117,stroke:#FBBF24,stroke-width:2px,color:#E6EDF3
-    classDef cbs fill:#0D1117,stroke:#FB7185,stroke-width:2px,color:#E6EDF3
-    class W,M ist
-    class N ken
-    class A,T,P uyg
-    class MA,D,S ver
-    class G,GS cbs
-
-    style IST fill:#161B22,stroke:#22D3EE,stroke-width:1px,color:#8B949E
-    style UYG fill:#161B22,stroke:#A855F7,stroke-width:1px,color:#8B949E
-    style VER fill:#161B22,stroke:#FBBF24,stroke-width:1px,color:#8B949E
-    style CBS fill:#161B22,stroke:#FB7185,stroke-width:1px,color:#8B949E
-```
-
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:8B5CF6,50:6366F1,100:06B6D4&height=2&section=header" width="100%" height="2" alt="" />
-
-## Derinlemesine
+## Yakından
 
 <details>
-<summary><b>🏛 &nbsp;Çok kiracılı platform mimarisi</b></summary>
+<summary><b>Çok kiracılı platform</b></summary>
 
-Her kurum kendi PostgreSQL veritabanında yaşar; global yapılandırma ayrı bir master veritabanında durur.
-İstek başlığındaki kiracı kimliği bir ara katmanda çözülür ve o isteğe ait bağlantı, modeller ve izinler oradan üretilir.
+Her kurum kendi PostgreSQL veritabanında duruyor, global yapılandırma ayrı bir master
+veritabanında. İstek başlığındaki kiracı kimliği ara katmanda çözülüyor; bağlantı,
+modeller ve izinler oradan üretiliyor. Yeni bir belediye eklemek yeni bir sürüm değil,
+yeni bir kayıt.
 
-- **Modül kalıbı** — 200'ü aşkın backend modülünün tamamı aynı iskelet üzerine kurulu: model → denetleyici → rota. Yeni modül açmak şablon işi.
-- **Yetkilendirme** — sayfa bazında oku/oluştur/güncelle/sil matrisi. Sol menü ağacı veritabanından üretilir; menü, izin ve rota tek bir kısa ad üzerinden hizalıdır.
-- **Mali doğruluk** — para hesapları kayan noktalı sayıyla değil `Decimal` ile yapılır; birden fazla tabloya dokunan her işlem tek transaction içinde, hata hâlinde geri alınır.
-- **Şema yönetimi** — otomatik şema senkronizasyonu kapalı. Her değişiklik sürümlenmiş bir migration olarak tüm aktif kiracılara sırayla uygulanır.
-- **Veri saklama** — denetim kanıtı olabilecek hiçbir kayıt otomatik silinmez; arşivleme, bölümleme ve pasife alma kullanılır.
+- 200'ü aşkın modülün tamamı aynı iskelet üzerinde: model, denetleyici, rota.
+- Yetki sayfa bazında oku/oluştur/güncelle/sil. Menü ağacı veritabanından üretiliyor ve
+  menü, izin, rota tek bir kısa ad üzerinden hizalı duruyor.
+- Para hesapları `Decimal` ile. Birden fazla tabloya dokunan iş tek transaction içinde,
+  hata olursa geri alınıyor.
+- Otomatik şema senkronizasyonu kapalı. Her değişiklik sürümlenmiş bir migration ve
+  aktif kiracıların hepsine sırayla uygulanıyor.
+- Denetim kanıtı olabilecek hiçbir kayıt otomatik silinmiyor. Yer sorunu olursa çözüm
+  arşivleme ve bölümleme.
 
 </details>
 
 <details>
-<summary><b>🗺 &nbsp;Coğrafi bilgi sistemleri</b></summary>
+<summary><b>Jeo-uzamsal hat</b></summary>
 
-CAD ortamında üretilmiş 1/1000 imar planlarını GeoPackage'a çevirip koordinat sistemi ve karakter kodlaması
-sorunlarını düzelterek PostGIS'e taşıdım; oradan da tarayıcıdaki haritaya kadar hattın tamamını kurdum.
+CAD ortamında üretilmiş 1/1000 imar planlarını GeoPackage'a çevirip koordinat sistemi ve
+karakter kodlaması sorunlarını düzelttikten sonra PostGIS'e taşıdım. Oradan tarayıcıdaki
+haritaya kadar hattın tamamı bende.
 
-- **Yayın** — GeoServer üzerinden WMS/WFS servisleri ve vektör karo (MVT) yayını; katman stilleri SLD ile tanımlı.
-- **Kalibrasyon** — stil kataloğu, referans imar yazılımıyla piksel düzeyinde kıyaslanarak eşitlendi; nizam, ada ve yapılaşma koşulu katmanları ham veriden türetildi.
-- **Performans** — renge/duruma göre ayrım gereken katmanlarda stil kararını istemciden alıp sunucu tarafında karoya gömdüm; ağır katmanlarda istemci yükü belirgin biçimde düştü. Katmanlar tembel yüklenir.
-- **Deneyim** — OpenLayers tabanlı panelde 3B bina görselleştirme ve kullanıcıya özel oturum kalıcılığı: harita konumu, açık katmanlar, altlık ve filtreler bir sonraki girişte yerinde durur.
-- **Yapay zekâ** — görüntüden üretilen kaçak yapı tespitlerini kurumun kendi kayıtlarıyla yan yana koyan birleşik ekran.
-
-</details>
-
-<details>
-<summary><b>🚀 &nbsp;Sunucu, dağıtım ve süreklilik</b></summary>
-
-Kod yazmakla bitmiyor: üretim ortamını da ben işletiyorum.
-
-- **Mavi-yeşil dağıtım** — aday slot hazırlanır, migration'lar koşar, doğrulama geçerse ters vekilin yukarı akışı devredilir, ardından duman testi. Başarısızlıkta otomatik geri alma. Elle container yeniden başlatmak yasak; bypass, bayat yukarı akış ve 502 demek.
-- **CI/CD** — kendi barındırdığım koşucular, sürümlenmiş imajlar ve etiketle tetiklenen yayın akışı.
-- **İzleme** — metrik toplayıcı → alarm kuralları → anlık bildirim; hata takibi ayrı bir serviste, olay müdahale kılavuzları yazılı.
-- **Yedekleme** — gerçek bir veri kaybı olayında üretim veritabanlarını yedekten ayağa kaldırdım, sonra da nedeni ortadan kaldıran düzeltmeyi hatta ekledim.
-- **İşletim** — TLS sertifikası otomasyonu, ters vekil yapılandırması, kendi posta sunucusu (Postfix/Dovecot) ve S3 uyumlu nesne depolama.
-- **Çevrimdışı kurulum** — internete kapalı kurumlar için USB ile taşınan kurulum paketi: tek komutluk sihirbaz, imajlar ve şema dâhil, sahada uçtan uca doğrulandı.
+- GeoServer üzerinden WMS/WFS servisleri ve vektör karo yayını, stiller SLD ile.
+- Stil kataloğu referans imar yazılımıyla piksel düzeyinde kıyaslanarak eşitlendi. Nizam,
+  ada ve yapılaşma koşulu katmanları ham veriden türetildi.
+- Renge göre ayrım gereken katmanlarda stil kararını istemciden alıp sunucuda karoya
+  gömdüm. Ağır katmanlarda istemci yükü belirgin düştü.
+- OpenLayers panelinde 3B bina görselleştirme var. Harita konumu, açık katmanlar, altlık
+  ve filtreler kullanıcı bazında saklanıyor; bir sonraki girişte yerinde duruyor.
+- Görüntüden üretilen kaçak yapı tespitleri, kurumun kendi kayıtlarıyla aynı ekranda.
 
 </details>
 
 <details>
-<summary><b>🔍 &nbsp;Entegrasyon ve tersine mühendislik</b></summary>
+<summary><b>Dağıtım ve işletim</b></summary>
 
-- **Decompile ile parite portu** — kaynak kodu bulunmayan, yalnızca derlenmiş hâlde erişilebilen kurumsal bir sistemin iş mantığını çıkardım ve modüllerini satır satır parite denetimiyle yeni platforma taşıdım (taşınır mal, bütçe, muhasebe).
-- **Eski uygulama portu** — kurtarılan bir PHP/Laravel kaynağından yeni API'ye kademeli geçiş, trafik ters vekil düzeyinde bölünerek.
-- **Servis entegrasyonları** — GTFS beslemeli toplu taşıma rota planlayıcı, araç takip, tek oturum açma vekilleri, haber akışı vekili.
-- **Yan servisler** — görüntü işleme hattı besleyen ayrı bir FastAPI servisi ve dijital kütüphane altyapısı.
+Aday slot hazırlanıyor, migration'lar koşuyor, doğrulama geçerse ters vekilin yukarı
+akışı devrediliyor, ardından duman testi. Başarısızlıkta geri alma otomatik. Elle
+konteyner yeniden başlatmak yasak; o yol bayat yukarı akış ve 502 demek.
+
+- Kendi barındırdığım koşucular, sürümlenmiş imajlar, etiketle tetiklenen yayın.
+- Metrik toplayıcıdan alarm kurallarına, oradan anlık bildirime giden bir izleme zinciri.
+  Hata takibi ayrı bir serviste, olay müdahale kılavuzları yazılı.
+- Gerçek bir veri kaybı olayında üretim veritabanlarını yedekten ayağa kaldırdım, sonra
+  aynı şeyin tekrarını engelleyen düzeltmeyi hatta ekledim.
+- Sertifika otomasyonu, ters vekil yapılandırması, posta sunucusu ve nesne depolama.
+- İnternete kapalı kurumlar için USB ile taşınan kurulum paketi. Tek komutluk sihirbaz,
+  imajlar ve şema dâhil, sahada uçtan uca çalıştığı görüldü.
 
 </details>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:8B5CF6,50:6366F1,100:06B6D4&height=2&section=header" width="100%" height="2" alt="" />
+<details>
+<summary><b>Entegrasyon ve yan servisler</b></summary>
 
-## Çalışma ilkelerim
+- Vatandaş mobil uygulaması için REST API ve gerçek zamanlı bildirim.
+- Tek oturum açma vekilleri, araç takip entegrasyonu, haber akışı vekili.
+- GTFS beslemeli toplu taşıma rota planlayıcı, üretimde kurulu.
+- Görüntü işleme hattını besleyen ayrı bir FastAPI servisi ve dijital kütüphane altyapısı.
 
-| İlke | Ne demek |
+</details>
+
+<img src="assets/divider.svg" width="100%" height="4" alt="" />
+
+## Nasıl çalışırım
+
+| | |
 |:--|:--|
-| **Varsayma, ölç** | Üretimle ilgili her iddiayı canlı sistemden kanıtla doğrularım. "Muhtemelen öyledir" bir yanıt değildir. |
-| **Veri silinmez** | Denetim kanıtı olabilecek hiçbir kayıt otomatik silinmez; çözüm arşivleme ve pasife almadır, `DELETE` değil. |
-| **Geri dönüşsüz işte tek göz yetmez** | Dağıtım, migration ve veri işlemlerinde biten işi bağımsız merceklerle kırmaya çalışırım. |
-| **Şema değişikliği bir migration'dır** | Otomatik şema senkronizasyonu yok; her değişiklik sürümlenmiş, izlenebilir ve geri alınabilir. |
-| **Kesinti bir tasarım hatasıdır** | Hat düzgün kurulmuşsa dağıtım fark edilmez. Elle müdahale, düzeltme değil yeni bir arıza kaynağıdır. |
+| **Varsayma, ölç** | Üretimle ilgili her iddiayı canlı sistemden kanıtla doğrularım. "Muhtemelen öyledir" bir cevap değil. |
+| **Veri silinmez** | Denetim kanıtı olabilecek kayıt otomatik silinmez. Yer sıkışıyorsa arşivle, bölümle, pasife al. |
+| **Tek göz yetmez** | Geri dönüşü olmayan işlerde biten işi bağımsız gözlerle kırmaya çalışırım. Bir kere yedeksiz kaybettiğin şey geri gelmiyor. |
+| **Şema değişikliği migration'dır** | Otomatik senkronizasyon yok. Her değişiklik sürümlenmiş, izlenebilir, geri alınabilir. |
+| **Kesinti tasarım hatasıdır** | Hat düzgün kurulmuşsa dağıtım fark edilmez. Elle müdahale düzeltme değil, yeni bir arıza kaynağı. |
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0:8B5CF6,50:6366F1,100:06B6D4&height=2&section=header" width="100%" height="2" alt="" />
+<img src="assets/divider.svg" width="100%" height="4" alt="" />
+
+<div align="center">
+
+<img src="assets/footer.svg" width="100%" alt="kanıta dayan, ölç, sonra dağıt" />
+
+</div>
 
 <!--
-  AKTİVİTE BÖLÜMÜ — şu an devre dışı.
+  AKTİVİTE BÖLÜMÜ — kapalı.
 
-  Neden: bu depoların commit'leri ekinakkaya1@hotmail.com adresiyle atılıyor ama bu adres
-  GitHub hesabına ekli/doğrulanmış olmadığı için katkılar hiçbir profile yazılmıyor.
-  Ölçüm (20.08.2026): son 1 yıl 36 katkı, gizli (private) katkı 0, güncel seri 0.
+  Commit'ler ekinakkaya1@hotmail.com ile atılıyor ama bu adres GitHub hesabına doğrulanmış
+  olarak ekli değil, dolayısıyla katkılar hiçbir profile yazılmıyor (ölçüm 20.08.2026:
+  son 1 yıl 36 katkı, gizli katkı 0, güncel seri 0). Kartlar sıfır gösterdiği için kapalı.
 
-  Açmak için sırasıyla:
-    1) Settings -> Emails -> ekinakkaya1@hotmail.com adresini ekle ve doğrula
-       (GitHub geçmiş commit'leri de geriye dönük olarak bu hesaba yazar)
-    2) Settings -> Public profile -> "Include private contributions on my profile" işaretle
-    3) Aşağıdaki bloğu yorumdan çıkarıp bu satırların yerine koy
+  Açmak için: (1) Settings > Emails'e o adresi ekle ve doğrula, (2) Settings > Public
+  profile > Include private contributions on my profile, (3) aşağıyı yorumdan çıkar.
 
-## Aktivite
-
-<div align="center">
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=ekinakkaya0&bg_color=0D1117&color=E6EDF3&line=A855F7&point=22D3EE&area=true&area_color=8B5CF6&title_color=22D3EE&hide_border=true&radius=10&custom_title=Katk%C4%B1%20Grafi%C4%9Fi" alt="Katkı grafiği" width="100%" />
-
-<img src="https://streak-stats.demolab.com?user=ekinakkaya0&locale=tr&hide_border=true&background=0D1117&border=1F2937&stroke=1F2937&ring=A855F7&fire=FBBF24&currStreakLabel=22D3EE&sideLabels=E6EDF3&dates=8B949E&sideNums=E6EDF3&currStreakNum=E6EDF3&date_format=j%20M%5B%20Y%5D" alt="Katkı serisi" />
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ekinakkaya0/ekinakkaya0/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/ekinakkaya0/ekinakkaya0/output/github-snake.svg" />
-  <img src="https://raw.githubusercontent.com/ekinakkaya0/ekinakkaya0/output/github-snake-dark.svg" alt="Katkı grafiğinde dolaşan yılan animasyonu" width="100%" />
-</picture>
-
-</div>
-
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=ekinakkaya0&bg_color=0D1117&color=E6EDF3&line=A855F7&point=22D3EE&area=true&area_color=8B5CF6&title_color=22D3EE&hide_border=true&radius=10" width="100%" alt="katkı grafiği" />
+  <img src="https://streak-stats.demolab.com?user=ekinakkaya0&locale=tr&hide_border=true&background=0D1117&stroke=1F2937&ring=A855F7&fire=FBBF24&currStreakLabel=22D3EE&sideLabels=E6EDF3&dates=8B949E&sideNums=E6EDF3&currStreakNum=E6EDF3" alt="katkı serisi" />
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ekinakkaya0/ekinakkaya0/output/github-snake-dark.svg" />
+    <img src="https://raw.githubusercontent.com/ekinakkaya0/ekinakkaya0/output/github-snake.svg" width="100%" alt="katkı yılanı" />
+  </picture>
 -->
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:06B6D4,55:6366F1,100:8B5CF6&height=140&section=footer&text=Kan%C4%B1ta%20dayan,%20%C3%B6l%C3%A7,%20sonra%20da%C4%9F%C4%B1t.&fontSize=19&fontColor=FFFFFF&fontAlignY=72&animation=fadeIn" alt="Kanıta dayan, ölç, sonra dağıt." width="100%" />
-
-</div>
-

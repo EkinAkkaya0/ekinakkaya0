@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" width="1200" height="300" role="img" aria-label="Ekin Akkaya, Platform Mühendisi">
+  <defs>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="0" spreadMethod="reflect">
+      <stop offset="0%" stop-color="#C084FC"/>
+      <stop offset="45%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+      <animateTransform attributeName="gradientTransform" type="translate"
+                        values="-0.55 0; 0.55 0; -0.55 0" dur="10s" repeatCount="indefinite"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#A855F7" stop-opacity="0"/>
+      <stop offset="25%" stop-color="#A855F7"/>
+      <stop offset="75%" stop-color="#22D3EE"/>
+      <stop offset="100%" stop-color="#22D3EE" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="spark" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.95"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-25%" y="-70%" width="150%" height="240%">
+      <feGaussianBlur stdDeviation="9" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft" x="-60%" y="-120%" width="220%" height="340%"><feGaussianBlur stdDeviation="64"/></filter>
+    <pattern id="dots" width="28" height="28" patternUnits="userSpaceOnUse">
+      <circle cx="1.6" cy="1.6" r="1.15" fill="#1B2430"/>
+    </pattern>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="300" rx="14"/></clipPath>
+    <clipPath id="ruleclip"><rect x="380" y="206" width="440" height="6" rx="3"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="300" fill="#0D1117"/>
+    <rect width="1200" height="300" fill="url(#dots)" opacity="0.6"/>
+
+    <ellipse cx="250" cy="70" rx="230" ry="130" fill="#7C3AED" opacity="0.30" filter="url(#soft)">
+      <animate attributeName="cx" values="250;430;250" dur="19s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.30;0.13;0.30" dur="13s" repeatCount="indefinite"/>
+    </ellipse>
+    <ellipse cx="960" cy="240" rx="250" ry="130" fill="#06B6D4" opacity="0.26" filter="url(#soft)">
+      <animate attributeName="cx" values="960;790;960" dur="23s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.26;0.11;0.26" dur="16s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <g stroke="#22D3EE" stroke-width="2" fill="none" opacity="0.55">
+      <path d="M28,64 L28,28 L64,28"/><path d="M1172,64 L1172,28 L1136,28"/>
+      <path d="M28,236 L28,272 L64,272"/><path d="M1172,236 L1172,272 L1136,272"/>
+      <animate attributeName="opacity" values="0.55;0.2;0.55" dur="5s" repeatCount="indefinite"/>
+    </g>
+
+    <text x="600" y="142" text-anchor="middle" font-family="'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif" font-size="68"
+          font-weight="800" letter-spacing="5" fill="url(#ink)" filter="url(#glow)">EKİN AKKAYA</text>
+
+    <text x="600" y="184" text-anchor="middle" font-family="'Segoe UI',Roboto,'Helvetica Neue',Arial,'Noto Sans',sans-serif" font-size="16.5"
+          letter-spacing="3" fill="#8B949E">Platform Mühendisi &#183; Full-Stack &#183; Jeo-uzamsal Sistemler &#183; DevOps</text>
+
+    <g clip-path="url(#ruleclip)">
+      <rect x="380" y="206" width="440" height="6" rx="3" fill="url(#line)" opacity="0.9"/>
+      <rect x="-140" y="206" width="140" height="6" fill="url(#spark)" opacity="0.85">
+        <animate attributeName="x" values="-140;1200" dur="4.5s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+
+    <g font-family="'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace" font-size="13" fill="#4B5563" letter-spacing="1.5">
+      <text x="600" y="248" text-anchor="middle">kamu &#183; jeo-uzamsal &#183; altyap&#305;</text>
+    </g>
+  </g>
+</svg>
