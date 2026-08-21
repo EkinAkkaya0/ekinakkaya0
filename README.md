@@ -5,8 +5,8 @@
   <img src="assets/console-light.svg" width="100%" alt="Ekin Doğucan Akkaya — Full-Stack ve DevOps Engineer, projelendirmeden yayına uçtan uca" />
 </picture>
 
-<a href="https://www.linkedin.com/in/ekin-dogucan-akkaya/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/badge-linkedin-dark.svg" /><img src="assets/badge-linkedin-light.svg" alt="LinkedIn — Ekin Doğucan Akkaya" height="30" /></picture></a>
-<a href="mailto:ekinakkaya0@hotmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/badge-mail-dark.svg" /><img src="assets/badge-mail-light.svg" alt="e-posta" height="30" /></picture></a>
+<a href="https://www.linkedin.com/in/ekin-dogucan-akkaya/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/badge-linkedin-dark.svg" /><img src="assets/badge-linkedin-light.svg" alt="LinkedIn — Ekin Doğucan Akkaya" height="32" /></picture></a>
+<a href="mailto:ekinakkaya0@hotmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/badge-mail-dark.svg" /><img src="assets/badge-mail-light.svg" alt="e-posta" height="32" /></picture></a>
 <picture><source media="(prefers-color-scheme: dark)" srcset="assets/badge-views-dark.svg" /><img src="assets/badge-views-light.svg" alt="görüntülenme" height="32" /></picture>
 
 <!-- Sayaç ancak ziyaretçi komarev görselini çektiğinde artar; rozetteki sayı
