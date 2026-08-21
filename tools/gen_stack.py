@@ -14,10 +14,10 @@ ROOT = pathlib.Path(__file__).resolve().parent.parent
 ICONS = json.load(open(pathlib.Path(__file__).resolve().parent / "icons.json"))
 MONO = "'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace"
 
-LIGHT = dict(name="light", card="#FFFFFF", chip="#F6F8FA", edge="#D0D7DE",
+LIGHT = dict(name="light", card="#F6F8FA", chip="#FFFFFF", edge="#D0D7DE",
              chipedge="#D8DEE4", ink="#1F2328", label="#0D1117", faint="#6E7781",
              ok="#1A7F37", rim=None, rim_a=0)
-DARK  = dict(name="dark", card="#0D1117", chip="#161B22", edge="#30363D",
+DARK  = dict(name="dark", card="#0E141B", chip="#161B22", edge="#30363D",
              chipedge="#2A313A", ink="#E6EDF3", label="#F0F6FC", faint="#8B949E",
              ok="#3FB950", rim="#FFFFFF", rim_a=0.075)
 

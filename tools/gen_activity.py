@@ -18,10 +18,10 @@ MONO = "'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace"
 UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 "
       "(KHTML, like Gecko) Chrome/124.0 Safari/537.36")
 
-LIGHT = dict(name="light", card="#FFFFFF", edge="#D0D7DE", ink="#0D1117", sub="#57606A",
+LIGHT = dict(name="light", card="#F6F8FA", edge="#D0D7DE", ink="#0D1117", sub="#57606A",
              faint="#8C959F", ok="#1A7F37", sheen="#0D1117", sheen_a=0.055, rim=None, rim_a=0,
              snake="#116329", shade="#0B1620", lv=["#EBEDF0", "#9BE9A8", "#40C463", "#30A14E", "#216E39"])
-DARK  = dict(name="dark", card="#0D1117", edge="#30363D", ink="#E6EDF3", sub="#8B949E",
+DARK  = dict(name="dark", card="#0E141B", edge="#30363D", ink="#E6EDF3", sub="#8B949E",
              faint="#6E7681", ok="#3FB950", sheen="#FFFFFF", sheen_a=0.085, rim="#FFFFFF",
              rim_a=0.075, snake="#56D364", shade="#050A0F", lv=["#161B22", "#0E4429", "#006D32", "#26A641", "#39D353"])
 

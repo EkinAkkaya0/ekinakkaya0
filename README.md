@@ -5,18 +5,14 @@
   <img src="assets/console-light.svg" width="100%" alt="Ekin Doğucan Akkaya — Full-Stack ve DevOps Engineer, projelendirmeden yayına uçtan uca" />
 </picture>
 
-<a href="https://www.linkedin.com/in/ekin-dogucan-akkaya/"><img src="https://img.shields.io/badge/Ekin_Do%C4%9Fucan_Akkaya-30363D?style=flat-square&logo=linkedin&logoColor=0A66C2" alt="LinkedIn" /></a>
-<a href="mailto:ekinakkaya0@hotmail.com"><img src="https://img.shields.io/badge/ekinakkaya0%40hotmail.com-30363D?style=flat-square&logo=microsoftoutlook&logoColor=C9D1D9" alt="e-posta" /></a>
-<img src="https://img.shields.io/github/last-commit/ekinakkaya0/ekinakkaya0?style=flat-square&label=son%20g%C3%BCncelleme&labelColor=30363D&color=1A7F37&display_timestamp=author" alt="" />
-<img src="https://komarev.com/ghpvc/?username=ekinakkaya0&label=g%C3%B6r%C3%BCnt%C3%BClenme&color=30363D&style=flat-square" alt="" />
+<a href="https://www.linkedin.com/in/ekin-dogucan-akkaya/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/badge-linkedin-dark.svg" /><img src="assets/badge-linkedin-light.svg" alt="LinkedIn — Ekin Doğucan Akkaya" height="30" /></picture></a>
+<a href="mailto:ekinakkaya0@hotmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/badge-mail-dark.svg" /><img src="assets/badge-mail-light.svg" alt="e-posta" height="30" /></picture></a>
+<img src="https://komarev.com/ghpvc/?username=ekinakkaya0&label=g%C3%B6r%C3%BCnt%C3%BClenme&color=30363D&style=flat-square" alt="görüntülenme" height="30" />
 
 
 </div>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/scene-dark.svg" />
-  <img src="assets/scene-light.svg" width="100%" alt="gece çalışma masası — ASCII çizim" />
-</picture>
+<img src="assets/scene.svg" width="100%" alt="ASCII çizim: gece çalışma masası — üç ekran, dizüstü, kahve" />
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/rule-a-dark.svg" />

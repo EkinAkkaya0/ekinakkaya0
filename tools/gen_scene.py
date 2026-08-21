@@ -15,12 +15,11 @@ import pathlib
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 MONO = "'SFMono-Regular',Consolas,'Liberation Mono',Menlo,monospace"
 
-LIGHT = dict(name="light", card="#FFFFFF", edge="#D0D7DE", ink="#0D1117", frame="#57606A",
-             faint="#C2C9D0", dim="#8C959F", ok="#1A7F37", warn="#9A6700", glow="#EEF2F5",
-             rim=None, rim_a=0)
-DARK  = dict(name="dark", card="#0D1117", edge="#30363D", ink="#E6EDF3", frame="#6E7681",
-             faint="#2B3138", dim="#8B949E", ok="#3FB950", warn="#D29922", glow="#161C24",
-             rim="#FFFFFF", rim_a=0.075)
+# Sahne bilinçli olarak her iki temada da gecedir: gece sahnesinin beyaz
+# zeminde olması hem çelişki hem de kontrastsızlık yaratıyordu.
+NIGHT = dict(name="night", card="#080C12", edge="#232C36", ink="#E6EDF3", frame="#5A6472",
+             faint="#2A323C", dim="#8B949E", ok="#3FB950", warn="#D29922", glow="#141C26",
+             screen="#0E151D", rim="#FFFFFF", rim_a=0.06)
 
 W, H = 104, 33          # tuval: sütun x satır
 
@@ -149,6 +148,7 @@ def scene():
 
     # ── masa kenarı ve ekran ışığının masaya vurması ─────────────────
     c.put(0, H-1, "─"*W, "edge")
+    c.screens = [(2,2,74,14,"#7DA0C4"), (80,2,22,23,"#4FD07A"), (20,17,44,8,"#8FA8C9")]
     for x in range(6, 70):
         if c.ch[H-2][x] == " ":
             c.ch[H-2][x] = "·"; c.co[H-2][x] = "glow"
@@ -169,6 +169,18 @@ def build(p, c):
     height = int(PAD_TOP + c.h*LH + PAD_BOT)
     left = (PANEL_W - c.w*CW) / 2
     o = [f'<rect width="{PANEL_W}" height="{height}" rx="6" fill="{p["card"]}"/>']
+    # oda: üstte hafif açılan bir gece göğü
+    o.append(f'<rect width="{PANEL_W}" height="{height}" rx="6" fill="url(#sky)"/>')
+
+    # ekranların ışığı: önce yumuşak hâle, sonra ekran yüzeyi
+    for cx, cy, cw, chh, tint in getattr(c, "screens", []):
+        x = left + cx*CW; y = PAD_TOP + cy*LH - LH*0.72
+        w = cw*CW; h = chh*LH
+        o.append(f'<rect x="{x-14:.1f}" y="{y-12:.1f}" width="{w+28:.1f}" height="{h+24:.1f}" '
+                 f'rx="18" fill="{tint}" opacity="0.10" filter="url(#soft)"/>')
+        o.append(f'<rect x="{x-4:.1f}" y="{y-4:.1f}" width="{w+8:.1f}" height="{h+8:.1f}" '
+                 f'rx="7" fill="{p["screen"]}"/>')
+
     if p["rim"]:
         o.append(f'<path d="M7,1.2 H{PANEL_W-7}" stroke="{p["rim"]}" stroke-opacity="{p["rim_a"]}" '
                  f'stroke-width="1.2" fill="none"/>')
@@ -191,19 +203,28 @@ def build(p, c):
 
     o.append(f'<rect x="0.5" y="0.5" width="{PANEL_W-1}" height="{height-1}" rx="6" '
              f'fill="none" stroke="{p["edge"]}"/>')
+    defs = (f'<filter id="soft" x="-40%" y="-40%" width="180%" height="180%">'
+            f'<feGaussianBlur stdDeviation="22"/></filter>'
+            f'<linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">'
+            f'<stop offset="0%" stop-color="#0F1822" stop-opacity="0.9"/>'
+            f'<stop offset="55%" stop-color="{p["card"]}" stop-opacity="0"/>'
+            f'<stop offset="100%" stop-color="#05080C" stop-opacity="0.85"/></linearGradient>')
     return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {PANEL_W} {height}" '
             f'width="{PANEL_W}" height="{height}" role="img" '
             f'aria-label="ASCII çizim: gece çalışma masası — üstte geniş ekranda kod editörü, '
             f'ortada dizüstünde tarayıcı, sağda dik ekranda sunucu terminali, önde klavye, '
-            f'yanda kahve">{"".join(o)}</svg>\n')
+            f'yanda kahve"><defs>{defs}</defs>{"".join(o)}</svg>\n')
 
 
 def main():
     c = scene()
     (ROOT / "assets").mkdir(exist_ok=True)
-    for p in (LIGHT, DARK):
-        (ROOT / "assets" / f"scene-{p['name']}.svg").write_text(build(p, c), encoding="utf-8")
-    print(f"sahne yazıldı: {c.w}x{c.h} tuval")
+    (ROOT / "assets" / "scene.svg").write_text(build(NIGHT, c), encoding="utf-8")
+    for old in ("scene-light.svg", "scene-dark.svg"):
+        f = ROOT / "assets" / old
+        if f.exists():
+            f.unlink()
+    print(f"sahne yazıldı (tek dosya, her temada gece): {c.w}x{c.h} tuval")
 
 
 if __name__ == "__main__":
