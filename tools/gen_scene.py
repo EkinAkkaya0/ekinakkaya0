@@ -22,7 +22,7 @@ DARK  = dict(name="dark", card="#0D1117", edge="#30363D", ink="#E6EDF3", frame="
              faint="#2B3138", dim="#8B949E", ok="#3FB950", warn="#D29922", glow="#161C24",
              rim="#FFFFFF", rim_a=0.075)
 
-W, H = 104, 32          # tuval: sütun x satır
+W, H = 104, 33          # tuval: sütun x satır
 
 
 class Canvas:
@@ -55,6 +55,7 @@ class Canvas:
 
 
 def scene():
+    """Ekranlardaki her şey uydurmadır; gerçek proje, sunucu ya da alan adı geçmez."""
     c = Canvas(W, H)
 
     # ── gece göğü: yıldızlar ve hilal ────────────────────────────────
@@ -62,83 +63,84 @@ def scene():
         c.put(x, y, "·", "faint")
     for x, y in ((25,0),(52,1),(83,1)):
         c.put(x, y, "*", "dim")
-    c.put(95, 0, ".-.", "warn"); c.put(94, 1, "(  `", "warn")   # hilal
+    c.put(95, 0, ".-.", "warn"); c.put(94, 1, "(  `", "warn")
 
-    # ── üstte geniş ekran: IDE ───────────────────────────────────────
+    # ── üstte geniş ekran: kod editörü ───────────────────────────────
     IX, IY, IW, IH = 2, 2, 74, 14
     c.box(IX, IY, IW, IH, "frame")
     c.put(IX+2, IY+1, "● ● ●", "dim")
-    c.put(IX+10, IY+1, "biryerden-api — src/routes.js", "ink")
+    c.put(IX+10, IY+1, "src/server.js", "ink")
     c.put(IX+IW-9, IY+1, "IDE", "dim")
     c.sep(IX, IY+2, IW, "frame")
-    for i in range(1, IH-3):
+    for i in range(1, IH-4):
         c.put(IX+16, IY+2+i, "│", "frame")
-    tree = ["▾ src", "  ▸ modules", "  ▸ config", "  • routes.js", "  • app.js", "▸ migrations", "▸ tests", "  .env"]
+    tree = ["▾ src", "  ▸ routes", "  ▸ models", "  • server.js", "  • db.js", "▸ tests", "▸ scripts", "  .env"]
     for i, t in enumerate(tree):
-        c.put(IX+2, IY+3+i, t[:13], "dim" if i != 3 else "ok")
+        c.put(IX+2, IY+3+i, t[:13], "ok" if i == 3 else "dim")
     code = [
-        (" 41", "import express from \"express\";", "ink"),
-        (" 42", "import { resolveTenant } from \"./middleware\";", "ink"),
+        (" 41", 'import express from "express";', "ink"),
+        (" 42", 'import { router } from "./routes";', "ink"),
         (" 43", "", "ink"),
         (" 44", "const app = express();", "ink"),
-        (" 45", "app.use(resolveTenant);", "ok"),
-        (" 46", "app.use(\"/api/imar\", imarRoutes);", "ink"),
-        (" 47", "app.use(\"/api/cbs\", cbsRoutes);", "ink"),
+        (" 45", "app.use(express.json());", "ok"),
+        (" 46", 'app.use("/api", router);', "ink"),
+        (" 47", "", "ink"),
         (" 48", "export default app;", "dim"),
     ]
     for i, (ln, src, col) in enumerate(code):
         c.put(IX+18, IY+3+i, ln, "faint")
         c.put(IX+22, IY+3+i, src[:IW-25], col)
     c.sep(IX, IY+IH-3, IW, "frame")
-    c.put(IX+2, IY+IH-2, "main ↑2", "ok")
-    c.put(IX+14, IY+IH-2, "0 hata   2 uyarı", "dim")
+    c.put(IX+2, IY+IH-2, "main", "ok")
+    c.put(IX+12, IY+IH-2, "0 hata   2 uyarı", "dim")
     c.put(IX+IW-16, IY+IH-2, "JS  UTF-8  LF", "dim")
-    # ayak
     c.put(IX+IW//2-4, IY+IH, "└──┬──┘", "dim")
 
     # ── sağda dik ekran: sunucu terminali ────────────────────────────
     TX, TY, TW, TH = 80, 2, 22, 23
     c.box(TX, TY, TW, TH, "frame")
-    c.put(TX+2, TY+1, "root@hetzner", "ok")
+    c.put(TX+2, TY+1, "root@srv01", "ok")
     c.sep(TX, TY+2, TW, "frame")
     term = [
-        ("$ docker ps", "ink"), ("api        up 9d", "dim"), ("panel      up 9d", "dim"),
-        ("postgis    up 9d", "dim"), ("nginx      up 9d", "dim"), ("", "dim"),
-        ("$ deploy.sh", "ink"), ("migrate    ok", "ok"), ("validate   ok", "ok"),
-        ("promote    ok", "ok"), ("smoke      ok", "ok"), ("0 downtime", "warn"),
-        ("", "dim"), ("$ tail -f app.log", "ink"), ("14:02 200 /api", "dim"),
-        ("14:02 200 /tiles", "dim"),
+        ("$ docker ps", "ink"), ("web        up 9d", "dim"), ("api        up 9d", "dim"),
+        ("db         up 9d", "dim"), ("cache      up 9d", "dim"), ("", "dim"),
+        ("$ ./deploy.sh", "ink"), ("build      ok", "ok"), ("migrate    ok", "ok"),
+        ("validate   ok", "ok"), ("promote    ok", "ok"), ("smoke      ok", "ok"),
+        ("0 downtime", "warn"), ("", "dim"), ("$ tail -f app.log", "ink"),
+        ("200 GET /health", "dim"), ("200 GET /api", "dim"),
     ]
     for i, (t, col) in enumerate(term[:TH-6]):
         c.put(TX+2, TY+3+i, t[:TW-4], col)
     c.put(TX+2, TY+TH-3, "█", "ok")
     c.put(TX+TW//2-3, TY+TH, "└──┬──┘", "dim")
 
-    # ── ortada MacBook: tarayıcı ─────────────────────────────────────
+    # ── ortada dizüstü: ekran + gövde + klavye ───────────────────────
     MX, MY, MW, MH = 20, 17, 44, 8
     c.box(MX, MY, MW, MH, "frame")
-    c.put(MX+2, MY+1, "◍ ◍ ◍", "dim")
-    c.put(MX+9, MY+1, "▁github.com/ekinakkaya0▁", "ink")
+    c.put(MX+2, MY+1, "● ● ●", "dim")
+    c.put(MX+9, MY+1, "localhost:3000", "ink")
     c.sep(MX, MY+2, MW, "frame")
-    page = [("EKİN DOĞUCAN AKKAYA", "ink"), ("Full-Stack & DevOps Engineer", "dim"),
-            ("▓▓▓▓▓░░▓▓░▓▓▓▓▓▓░░▓░▓▓▓▓▓▓▓▓░▓▓▓░", "ok")]
-    for i, (t, col) in enumerate(page):
-        c.put(MX+3, MY+3+i, t[:MW-6], col)
-    # menteşe ve gövde
-    c.put(MX-3, MY+MH, "▄" + "▄"*(MW+4), "dim")
-    c.put(MX-4, MY+MH+1, "▀" + "▀"*(MW+6), "frame")
+    # sayfa içeriği: gerçek metin değil, yer tutucu bloklar
+    c.put(MX+3, MY+3, "████████████  ▁▁▁▁▁▁▁▁", "ok")
+    c.put(MX+3, MY+4, "▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓  ▓▓▓▓▓▓▓▓", "dim")
+    c.put(MX+3, MY+5, "▓▓▓▓▓▓▓▓  ▓▓▓▓▓▓▓▓▓▓▓▓  ▓▓▓", "faint")
 
-    # ── klavye ───────────────────────────────────────────────────────
-    KX, KY, KW = 24, 27, 40
-    c.box(KX, KY, KW, 4, "dim", round_=True)
-    rows = ["▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄",
-            " ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄▄",
-            " ▄▄▄ ▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄ ▄▄ ▄▄▄ ▄▄ ▄"]
-    for i, r in enumerate(rows):
-        c.put(KX+3, KY+1+i, r[:KW-4], "faint")
+    # gövde: menteşeden biraz geniş, üstünde dizüstü klavyesi ve izleme yüzeyi
+    DX, DY, DW, DH = MX-3, MY+MH, MW+6, 7
+    c.box(DX, DY, DW, DH, "dim", round_=True)
+    keys = [
+        "▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄▄",
+        " ▄▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄ ▄▄▄▄",
+        "  ▄▄▄▄ ▄▄ ▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄ ▄▄ ▄▄▄ ▄▄ ▄▄",
+    ]
+    for i, r in enumerate(keys):
+        c.put(DX+3, DY+1+i, r[:DW-5], "faint")
+    tp = 14
+    c.put(DX + (DW-tp)//2, DY+4, "┌" + "─"*(tp-2) + "┐", "faint")
+    c.put(DX + (DW-tp)//2, DY+5, "└" + "─"*(tp-2) + "┘", "faint")
 
     # ── kahve ────────────────────────────────────────────────────────
-    QX, QY = 70, 25
+    QX, QY = 71, 26
     c.put(QX+2, QY,   "≈  ≈", "faint")
     c.put(QX,   QY+1, "┌──────┐", "dim")
     c.put(QX,   QY+2, "│      ├╮", "dim")
@@ -151,7 +153,6 @@ def scene():
         if c.ch[H-2][x] == " ":
             c.ch[H-2][x] = "·"; c.co[H-2][x] = "glow"
     return c
-
 
 FS = 13.5
 CW = FS * 0.6005
