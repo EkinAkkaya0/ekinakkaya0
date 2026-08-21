@@ -13,20 +13,10 @@
 
 </div>
 
-```
-┌─ ÇALIŞTIĞIM ALANLAR ─────────────────────────────────────────┐
-│                                                              │
-│  kamu / belediye       multi-tenant platform, CBS, mobil     │
-│  tarım / agrotech      üretici platformu, QR izlenebilirlik  │
-│  sanayi / üretim       stok-sipariş takibi, CNC izleme       │
-│  perakende             CRM/ERP, pazaryeri ve ödeme           │
-│  turizm / gastronomi   restoran işletim sistemi, otel        │
-│  spor kulüpleri        kurumsal site, üyelik, içerik         │
-│  sivil toplum          istihdam ve kadın platformu           │
-│  kamu ihale            mevzuat ve teklif modülü              │
-│                                                              │
-└──────────────────────────────────────────────────────────────┘
-```
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/scene-dark.svg" />
+  <img src="assets/scene-light.svg" width="100%" alt="gece çalışma masası — ASCII çizim" />
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/rule-a-dark.svg" />
@@ -44,6 +34,19 @@ kurum başına ayrı veritabanı, 200'ün üzerinde backend modülü ve 43 panel
 oradan ibaret değil. Tarımsal üretici platformu, fabrikada CNC makine ve stok takibi,
 tekstilde CRM/ERP ile pazaryeri ve ödeme entegrasyonu, restoran işletim sistemi ve dört
 ayrı Flutter uygulaması da aynı elden çıktı.
+
+### Çalıştığım alanlar
+
+| Sektör | Ne yaptım |
+|:--|:--|
+| **kamu / belediye** | multi-tenant yönetim platformu, CBS, vatandaş mobil |
+| **tarım / agrotech** | üretici platformu, QR izlenebilirlik, toprak analizi |
+| **sanayi / üretim** | stok ve sipariş takibi, CNC makine izleme |
+| **perakende** | CRM/ERP, pazaryeri ve ödeme entegrasyonu |
+| **turizm / gastronomi** | restoran işletim sistemi, otel, garson uygulaması |
+| **spor kulüpleri** | kurumsal site, üyelik, içerik yönetimi |
+| **sivil toplum** | istihdam platformu, kadın platformu, bilim merkezi |
+| **kamu ihale / mevzuat** | mevzuat ve teklif modülü |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/rule-b-dark.svg" />
@@ -245,11 +248,16 @@ ile gider. Geri dönüşü olmayan işlerde tek gözle yetinmem, biteni bağıms
 ## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/marker-dark.svg" /><img src="assets/marker-light.svg" alt="" height="20" /></picture> Aktivite
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg" />
-  <img src="assets/activity-light.svg" width="100%" alt="katkı takvimi, yoğunluk ve yılan" />
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ekinakkaya0/ekinakkaya0/output/github-snake-dark.svg" />
+  <img src="https://raw.githubusercontent.com/ekinakkaya0/ekinakkaya0/output/github-snake.svg" width="100%" alt="katkı grafiğinde dolaşan yılan" />
 </picture>
 
-<sub>Tek parça: takvim, üzerinde yılı baştan sona tarayan yılan, aynı sütuna tepki veren
-yoğunluk çubukları ve katkılardan türetilmiş manzara. GitHub'ın genel katkı verisinden
-üretiliyor, bir GitHub Action her gün yeniliyor. Üçüncü parti bir servise bağlı değil.</sub>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg" />
+  <img src="assets/activity-light.svg" width="100%" alt="son bir yılın günlük katkı yoğunluğu" />
+</picture>
+
+<sub>Yılan katkı ızgarasını dolaşıyor; altındaki panel aynı verinin günlük yoğunluğunu ve
+yıla yayılmış hâlini gösteriyor. İkisi de GitHub'ın genel katkı verisinden, her gün bir
+GitHub Action ile yenileniyor.</sub>
 

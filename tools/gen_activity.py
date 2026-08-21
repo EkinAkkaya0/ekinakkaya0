@@ -40,17 +40,14 @@ GX       = 70                 # ızgara ve yoğunluk bloğu ortak sol kenar
 PITCH    = 17
 CELL     = 14
 HEAD_H   = 54
-CAL_Y    = 92                 # ızgara üst kenarı
-CAL_H    = 7 * PITCH - (PITCH - CELL)
-ISO_Y    = 322                # yoğunluk taban satırı (r=0)
+ISO_Y    = 128                # yoğunluk taban satırı (r=0)
 ISO_PY   = 11.6
 ISO_SK   = 5.2
 ISO_TW   = 15.0
 RISE     = [0, 6, 12, 19, 27]
-LS_TOP   = 430
-H        = 540
+LS_TOP   = 246
+H        = 360
 BASE     = H - 14             # manzara taban çizgisi
-CYCLE    = 34.0               # yılanın bir turu
 
 
 def tr(n):
@@ -115,14 +112,12 @@ def build(p, weeks, total, longest, now):
 
     # ── soldan aşağı inen ortak aksan rayı ───────────────────────────────
     o.append(f'<rect x="{RAIL_X}" y="24" width="3" height="{H-48}" rx="1.5" '
-             f'fill="{p["ok"]}" opacity="0.16"/>')
-    o.append(f'<rect x="{RAIL_X}" y="24" width="3" height="96" rx="1.5" fill="{p["ok"]}" opacity="0.85">'
-             f'<animate attributeName="y" values="24;{H-120}" dur="{CYCLE}s" repeatCount="indefinite"/>'
-             f'</rect>')
+             f'fill="{p["ok"]}" opacity="0.28"/>')
+
 
     # ── başlık şeridi ────────────────────────────────────────────────────
     o.append(f'<text x="{CX0}" y="34" font-family="{MONO}" font-size="9.5" letter-spacing="2.4" '
-             f'fill="{p["faint"]}">AKTİVİTE</text>')
+             f'fill="{p["faint"]}">SON BİR YIL</text>')
     stats = [(tr(total), "katkı"), (f"{tr(longest)} gün", "en uzun seri"), (f"{tr(now)} gün", "güncel seri")]
     LW, VW, GAP, PAD = 6.65, 8.5, 9.0, 30.0   # etiket/değer karakter genişliği ve boşluklar
     x = CX1
@@ -135,79 +130,12 @@ def build(p, weeks, total, longest, now):
         x -= len(val) * VW + PAD
     o.append(f'<line x1="{CX0}" y1="{HEAD_H}" x2="{CX1}" y2="{HEAD_H}" stroke="{p["edge"]}"/>')
 
-    # ── ay ve gün etiketleri ─────────────────────────────────────────────
-    seen = set()
-    for wi, wk in enumerate(weeks):
-        d0 = wk[0]["date"]; m = int(d0[5:7])
-        if m not in seen and int(d0[8:10]) <= 7:
-            seen.add(m)
-            o.append(f'<text x="{GX+wi*PITCH}" y="{CAL_Y-9}" font-family="{MONO}" font-size="9" '
-                     f'fill="{p["faint"]}">{AY[m-1]}</text>')
-    for wd, lab in GUN.items():
-        o.append(f'<text x="{GX-9}" y="{CAL_Y+wd*PITCH+11}" text-anchor="end" font-family="{MONO}" '
-                 f'font-size="8.5" fill="{p["faint"]}">{lab}</text>')
-
-    # ── yılanın gezeceği yol: sütun sütun, aşağı-yukarı ──────────────────
-    order, pts = [], []
-    for wi, wk in enumerate(weeks):
-        seq = wk if wi % 2 == 0 else list(reversed(wk))
-        for d in seq:
-            cx = GX + wi*PITCH + CELL/2
-            cy = CAL_Y + d["weekday"]*PITCH + CELL/2
-            order.append((wi, d)); pts.append((cx, cy))
-    N = len(order)
-
-    # ── takvim hücreleri; yılan geçince boşalır ──────────────────────────
-    for k, (wi, d) in enumerate(order):
-        lv = min(4, max(0, d["level"]))
-        x = GX + wi*PITCH; y = CAL_Y + d["weekday"]*PITCH
-        cell = (f'<rect x="{x}" y="{y}" width="{CELL}" height="{CELL}" rx="3" fill="{p["lv"][lv]}">'
-                f'<title>{d["date"]}: {d["count"]}</title>')
-        if lv:
-            t = round(k / max(1, N-1), 5)
-            cell += (f'<animate attributeName="fill" '
-                     f'values="{p["lv"][lv]};{p["lv"][lv]};{p["lv"][0]};{p["lv"][0]}" '
-                     f'keyTimes="0;{max(0.0, t-0.0012)};{t};1" dur="{CYCLE}s" '
-                     f'repeatCount="indefinite" calcMode="discrete"/>')
-        o.append(cell + '</rect>')
-
-    # ── yılan: baş + gövde, aynı yolda gecikmeli ─────────────────────────
-    SEG = 7
-    for i in range(SEG):
-        sz = CELL - i*1.35
-        op = 0.95 - i*0.105
-        col = p["snake"] if i == 0 else mix(p["snake"], p["card"], 0.12 + i*0.085)
-        xs = ";".join(f"{x - sz/2:.1f}" for x, _ in pts)
-        ys = ";".join(f"{y - sz/2:.1f}" for _, y in pts)
-        o.append(f'<rect x="{pts[0][0]-sz/2:.1f}" y="{pts[0][1]-sz/2:.1f}" width="{sz:.2f}" '
-                 f'height="{sz:.2f}" rx="{sz/3:.2f}" fill="{col}" opacity="{op:.2f}">'
-                 f'<animate attributeName="x" values="{xs}" dur="{CYCLE}s" '
-                 f'repeatCount="indefinite" begin="-{i*0.30:.2f}s"/>'
-                 f'<animate attributeName="y" values="{ys}" dur="{CYCLE}s" '
-                 f'repeatCount="indefinite" begin="-{i*0.30:.2f}s"/></rect>')
-
-    # ── gösterge ─────────────────────────────────────────────────────────
-    ly = CAL_Y + CAL_H + 26
-    o.append(f'<text x="{GX}" y="{ly}" font-family="{MONO}" font-size="8.5" fill="{p["faint"]}">az</text>')
-    for i, c in enumerate(p["lv"]):
-        o.append(f'<rect x="{GX+24+i*15}" y="{ly-9}" width="11" height="11" rx="2.5" fill="{c}"/>')
-    o.append(f'<text x="{GX+24+len(p["lv"])*15+6}" y="{ly}" font-family="{MONO}" font-size="8.5" '
-             f'fill="{p["faint"]}">çok</text>')
-    o.append(f'<text x="{CX1}" y="{ly}" text-anchor="end" font-family="{MONO}" font-size="8.5" '
-             f'letter-spacing="1.2" fill="{p["faint"]}">yılan bir yılı baştan sona tarıyor</text>')
-    o.append(f'<line x1="{CX0}" y1="{ly+18}" x2="{CX1}" y2="{ly+18}" stroke="{p["edge"]}"/>')
-
     # ── yoğunluk: oblik çubuklar, yılanla aynı sütunda parlar ────────────
     o.append(f'<text x="{CX0}" y="{ISO_Y-46}" font-family="{MONO}" font-size="9.5" letter-spacing="2.4" '
              f'fill="{p["faint"]}">YOĞUNLUK</text>')
     o.append(f'<text x="{CX1}" y="{ISO_Y-46}" text-anchor="end" font-family="{MONO}" font-size="8.5" '
              f'letter-spacing="1.2" fill="{p["faint"]}">her çubuk bir gün</text>')
     for wi, wk in enumerate(weeks):
-        t = round((wi * 7) / max(1, N-1), 5)
-        a = max(0.0, t - 0.0015); b = min(1.0, t + 0.035)
-        o.append(f'<g opacity="0.5"><animate attributeName="opacity" '
-                 f'values="0.5;0.5;1;0.5;0.5" keyTimes="0;{a};{t};{b};1" '
-                 f'dur="{CYCLE}s" repeatCount="indefinite"/>')
         for d in wk:
             r = d["weekday"]; lv = min(4, max(0, d["level"])); h = RISE[lv]
             bx = GX + wi*PITCH - r*ISO_SK; by = ISO_Y + r*ISO_PY
@@ -222,13 +150,7 @@ def build(p, weeks, total, longest, now):
             o.append(f'<path d="M{bx:.1f},{by-h:.1f} L{bx+ISO_TW:.1f},{by-h:.1f} '
                      f'L{bx-ISO_SK+ISO_TW:.1f},{by+ISO_PY-h:.1f} L{bx-ISO_SK:.1f},{by+ISO_PY-h:.1f} Z" fill="{top}">'
                      f'<title>{d["date"]}: {d["count"]}</title></path>')
-        o.append('</g>')
 
-    # ── iki bloğu birbirine bağlayan ortak tarama başlığı ────────────────
-    x0 = GX + CELL/2; x1 = GX + (len(weeks)-1)*PITCH + CELL/2
-    o.append(f'<rect x="{x0}" y="{CAL_Y-4}" width="1.5" height="{ISO_Y + 6*ISO_PY + 14 - CAL_Y}" '
-             f'fill="{p["ok"]}" opacity="0.30">'
-             f'<animate attributeName="x" values="{x0};{x1}" dur="{CYCLE}s" repeatCount="indefinite"/></rect>')
     o.append(f'<line x1="{CX0}" y1="{LS_TOP-38}" x2="{CX1}" y2="{LS_TOP-38}" stroke="{p["edge"]}"/>')
 
     # ── manzara: katkı yoğunluğundan türetilmiş, kayan katmanlar ─────────
@@ -251,32 +173,21 @@ def build(p, weeks, total, longest, now):
             d += f" L{x+dx:.1f},{y:.1f}"
         return d + f" L{pt[-1][0]+dx:.1f},{BASE:.1f} Z"
 
-    for li, (vals, amp, op, dur) in enumerate(
-            ((smooth(12), 96, 0.26, 96.0), (smooth(6), 74, 0.44, 74.0), (smooth(2), 52, 0.86, 56.0))):
+    for li, (vals, amp, op) in enumerate(
+            ((smooth(12), 96, 0.26), (smooth(6), 74, 0.44), (smooth(2), 52, 0.86))):
         pt = profile(vals, amp)
         col = mix(p["ok"], p["card"], 0.46 - li*0.23)
-        o.append(f'<g clip-path="url(#lsclip)" fill="{col}" opacity="{op}"><g>'
-                 f'<animateTransform attributeName="transform" type="translate" '
-                 f'values="0 0;-{W} 0" dur="{dur}s" repeatCount="indefinite"/>'
-                 f'<path d="{ridge(pt)}"/><path d="{ridge(pt, W)}"/></g></g>')
+        o.append(f'<g clip-path="url(#lsclip)" fill="{col}" opacity="{op}">'
+                 f'<path d="{ridge(pt)}"/></g>')
     o.append(f'<line x1="0" y1="{BASE}" x2="{W}" y2="{BASE}" stroke="{p["edge"]}"/>')
     o.append(f'<text x="{CX0}" y="{LS_TOP-14}" font-family="{MONO}" font-size="11.5" '
              f'letter-spacing="2.4" fill="{p["faint"]}">github.com/ekinakkaya0</text>')
 
-    # ── panel boyunca tek ışık süpürmesi ─────────────────────────────────
-    o.append(f'<g clip-path="url(#panel)"><rect x="-460" y="-{H}" width="330" height="{H*3}" '
-             f'fill="url(#sheen)" transform="skewX(-16)">'
-             f'<animate attributeName="x" values="-460;-460;{W+300};{W+300}" '
-             f'keyTimes="0;0.25;0.72;1" dur="23s" repeatCount="indefinite"/></rect></g>')
     o.append(f'<rect x="0.5" y="0.5" width="{W-1}" height="{H-1}" rx="8" fill="none" stroke="{p["edge"]}"/>')
 
     defs = (f'<clipPath id="panel"><rect width="{W}" height="{H}" rx="8"/></clipPath>'
             f'<clipPath id="lsclip"><rect x="1" y="{LS_TOP-2}" width="{W-2}" height="{H-LS_TOP+1}"/></clipPath>'
-            f'<linearGradient id="sheen" x1="0" y1="0" x2="1" y2="0">'
-            f'<stop offset="0%" stop-color="{p["sheen"]}" stop-opacity="0"/>'
-            f'<stop offset="45%" stop-color="{p["sheen"]}" stop-opacity="{p["sheen_a"]}"/>'
-            f'<stop offset="55%" stop-color="{p["sheen"]}" stop-opacity="{p["sheen_a"]}"/>'
-            f'<stop offset="100%" stop-color="{p["sheen"]}" stop-opacity="0"/></linearGradient>')
+            '')
 
     return (f'<svg xmlns="http://www.w3.org/2000/svg" '
             f'viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" '
