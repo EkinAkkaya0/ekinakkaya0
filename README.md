@@ -245,31 +245,11 @@ ile gider. Geri dönüşü olmayan işlerde tek gözle yetinmem, biteni bağıms
 ## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/marker-dark.svg" /><img src="assets/marker-light.svg" alt="" height="20" /></picture> Aktivite
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/contrib-dark.svg" />
-  <img src="assets/contrib-light.svg" width="100%" alt="katkı takvimi" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/activity-dark.svg" />
+  <img src="assets/activity-light.svg" width="100%" alt="katkı takvimi, yoğunluk ve yılan" />
 </picture>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/iso-dark.svg" />
-  <img src="assets/iso-light.svg" width="100%" alt="günlük katkı yoğunluğu" />
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ekinakkaya0/ekinakkaya0/output/github-snake-dark.svg" />
-  <img src="https://raw.githubusercontent.com/ekinakkaya0/ekinakkaya0/output/github-snake.svg" width="100%" alt="katkı grafiğinde dolaşan yılan" />
-</picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/rhythm-dark.svg" />
-  <img src="assets/rhythm-light.svg" width="100%" alt="çalışma saati ve haftanın günü dağılımı" />
-</picture>
-
-<sub>Takvim, yoğunluk grafiği ve yılan GitHub'ın genel katkı verisinden üretiliyor; bir GitHub
-Action her gün yeniliyor. Çalışma ritmi paneli ise yerel git geçmişinden gelir — GitHub'a hiç
-gitmemiş depolar da dahil — ve elle yenilenir, ölçüm tarihi panelin altında yazılı.</sub>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/landscape-dark.svg" />
-  <img src="assets/landscape-light.svg" width="100%" alt="" />
-</picture>
+<sub>Tek parça: takvim, üzerinde yılı baştan sona tarayan yılan, aynı sütuna tepki veren
+yoğunluk çubukları ve katkılardan türetilmiş manzara. GitHub'ın genel katkı verisinden
+üretiliyor, bir GitHub Action her gün yeniliyor. Üçüncü parti bir servise bağlı değil.</sub>
 

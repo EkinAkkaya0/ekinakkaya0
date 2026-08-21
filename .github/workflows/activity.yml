@@ -1,4 +1,4 @@
-name: Katkı Takvimi
+name: Aktivite Paneli
 
 on:
   schedule:
@@ -7,11 +7,11 @@ on:
   push:
     branches: [main]
     paths:
-      - "tools/gen_contrib.py"
-      - ".github/workflows/contrib.yml"
+      - "tools/gen_activity.py"
+      - ".github/workflows/activity.yml"
 
 concurrency:
-  group: contrib
+  group: activity
   cancel-in-progress: true
 
 jobs:
@@ -25,14 +25,14 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Takvimi üret
-        run: python tools/gen_contrib.py
+      - name: Paneli üret
+        run: python tools/gen_activity.py
 
       - name: Değiştiyse işle
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/contrib-light.svg assets/contrib-dark.svg
+          git add assets/activity-light.svg assets/activity-dark.svg
           git diff --staged --quiet && echo "değişiklik yok" && exit 0
-          git commit -m "katkı takvimi güncellendi"
+          git commit -m "aktivite paneli güncellendi"
           git push
