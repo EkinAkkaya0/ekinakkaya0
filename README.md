@@ -7,7 +7,11 @@
 
 <a href="https://www.linkedin.com/in/ekin-dogucan-akkaya/"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/badge-linkedin-dark.svg" /><img src="assets/badge-linkedin-light.svg" alt="LinkedIn — Ekin Doğucan Akkaya" height="30" /></picture></a>
 <a href="mailto:ekinakkaya0@hotmail.com"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/badge-mail-dark.svg" /><img src="assets/badge-mail-light.svg" alt="e-posta" height="30" /></picture></a>
-<img src="https://komarev.com/ghpvc/?username=ekinakkaya0&label=g%C3%B6r%C3%BCnt%C3%BClenme&color=30363D&style=flat-square" alt="görüntülenme" height="30" />
+<picture><source media="(prefers-color-scheme: dark)" srcset="assets/badge-views-dark.svg" /><img src="assets/badge-views-light.svg" alt="görüntülenme" height="32" /></picture>
+
+<!-- Sayaç ancak ziyaretçi komarev görselini çektiğinde artar; rozetteki sayı
+     her gün bir GitHub Action ile buradan okunup gömülüyor. -->
+<img src="https://komarev.com/ghpvc/?username=ekinakkaya0&label=g%C3%B6r%C3%BCnt%C3%BClenme&color=30363D&style=flat-square" width="1" height="1" alt="" />
 
 
 </div>
