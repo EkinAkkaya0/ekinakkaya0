@@ -23,6 +23,23 @@
   <img src="assets/rule-a-light.svg" width="100%" alt="" />
 </picture>
 
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-yigin-dark.svg" /><img src="assets/h-yigin-light.svg" alt="Yığın" width="100%" /></picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stackband-dark.svg" />
+  <img src="assets/stackband-light.svg" width="100%" alt="kullandığım teknolojiler" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stack-dark.svg" />
+  <img src="assets/stack-light.svg" width="100%" alt="teknoloji yığını: 8 kategoride 51 teknoloji" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-b-dark.svg" />
+  <img src="assets/rule-b-light.svg" width="100%" alt="" />
+</picture>
+
 ## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/marker-dark.svg" /><img src="assets/marker-light.svg" alt="" height="20" /></picture> Kısaca
 
 Yazılım işlerini uçtan uca alıyorum. Keşif görüşmesinden fizibiliteye, mimariden arayüz
@@ -49,8 +66,8 @@ ayrı Flutter uygulaması da aynı elden çıktı.
 | **kamu ihale / mevzuat** | mevzuat ve teklif modülü |
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-b-dark.svg" />
-  <img src="assets/rule-b-light.svg" width="100%" alt="" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-a-dark.svg" />
+  <img src="assets/rule-a-light.svg" width="100%" alt="" />
 </picture>
 
 ## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-uctan-uca-dark.svg" /><img src="assets/h-uctan-uca-light.svg" alt="Uçtan uca" width="100%" /></picture>
@@ -68,8 +85,8 @@ ayrı Flutter uygulaması da aynı elden çıktı.
 | **Belgeleme** | Kullanım kılavuzu, runbook, teknik olmayan anlatım, satış sunumu. |
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-a-dark.svg" />
-  <img src="assets/rule-a-light.svg" width="100%" alt="" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-b-dark.svg" />
+  <img src="assets/rule-b-light.svg" width="100%" alt="" />
 </picture>
 
 ## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-derinlik-dark.svg" /><img src="assets/h-derinlik-light.svg" alt="Derinlik" width="100%" /></picture>
@@ -86,53 +103,6 @@ Katman başına, gerçekten uğraştığım türden sorunlar:
 | **Sistem** | 30 GB'a dayanan bir Next.js build'i için swap açmak. Self-hosted runner'ların topluca deregister olması. systemd unit'leri, disk baskısı, arşivleme. |
 | **Ağ ve sertifika** | Postfix SNI map'inin sertifika yenilemesinden sonra bayat kalması; `postmap -F` olmadan çözülmüyor. Birbirini ezen iki ayrı certbot ağacı. |
 | **Olay müdahalesi** | Ele geçirilmiş bir sitede forensic çıkarmak. Üretim veritabanlarını yedekten ayağa kaldırmak ve nedeni ortadan kaldıran düzeltmeyi hatta eklemek. |
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-b-dark.svg" />
-  <img src="assets/rule-b-light.svg" width="100%" alt="" />
-</picture>
-
-## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-yigin-dark.svg" /><img src="assets/h-yigin-light.svg" alt="Yığın" width="100%" /></picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/stackband-dark.svg" />
-  <img src="assets/stackband-light.svg" width="100%" alt="kullandığım teknolojiler" />
-</picture>
-
-<table>
-<tr>
-<td valign="middle" width="17%"><b>Runtime &amp; API</b></td>
-<td valign="middle"><img src="https://img.shields.io/badge/Node.js-30363D?style=flat-square&labelColor=30363D&logo=nodedotjs&logoColor=5FA04E" alt="Node.js" /> <img src="https://img.shields.io/badge/Express-30363D?style=flat-square&labelColor=30363D&logo=express&logoColor=C9D1D9" alt="Express" /> <img src="https://img.shields.io/badge/ES_Modules-30363D?style=flat-square&labelColor=30363D" alt="ES Modules" /> <img src="https://img.shields.io/badge/Socket.IO-30363D?style=flat-square&labelColor=30363D&logo=socketdotio&logoColor=C9D1D9" alt="Socket.IO" /> <img src="https://img.shields.io/badge/Python-30363D?style=flat-square&labelColor=30363D&logo=python&logoColor=3776AB" alt="Python" /> <img src="https://img.shields.io/badge/FastAPI-30363D?style=flat-square&labelColor=30363D&logo=fastapi&logoColor=009688" alt="FastAPI" /> <img src="https://img.shields.io/badge/PHP_%2F_Laravel-30363D?style=flat-square&labelColor=30363D&logo=laravel&logoColor=FF2D20" alt="PHP / Laravel" /></td>
-</tr>
-<tr>
-<td valign="middle" width="17%"><b>Frontend</b></td>
-<td valign="middle"><img src="https://img.shields.io/badge/Next.js-30363D?style=flat-square&labelColor=30363D&logo=nextdotjs&logoColor=C9D1D9" alt="Next.js" /> <img src="https://img.shields.io/badge/React-30363D?style=flat-square&labelColor=30363D&logo=react&logoColor=61DAFB" alt="React" /> <img src="https://img.shields.io/badge/TypeScript-30363D?style=flat-square&labelColor=30363D&logo=typescript&logoColor=3178C6" alt="TypeScript" /> <img src="https://img.shields.io/badge/Tailwind-30363D?style=flat-square&labelColor=30363D&logo=tailwindcss&logoColor=06B6D4" alt="Tailwind" /> <img src="https://img.shields.io/badge/MUI-30363D?style=flat-square&labelColor=30363D&logo=mui&logoColor=007FFF" alt="MUI" /> <img src="https://img.shields.io/badge/Vite-30363D?style=flat-square&labelColor=30363D&logo=vite&logoColor=646CFF" alt="Vite" /></td>
-</tr>
-<tr>
-<td valign="middle" width="17%"><b>Mobil</b></td>
-<td valign="middle"><img src="https://img.shields.io/badge/Flutter-30363D?style=flat-square&labelColor=30363D&logo=flutter&logoColor=02569B" alt="Flutter" /> <img src="https://img.shields.io/badge/Dart-30363D?style=flat-square&labelColor=30363D&logo=dart&logoColor=0175C2" alt="Dart" /></td>
-</tr>
-<tr>
-<td valign="middle" width="17%"><b>Veri katmanı</b></td>
-<td valign="middle"><img src="https://img.shields.io/badge/PostgreSQL-30363D?style=flat-square&labelColor=30363D&logo=postgresql&logoColor=4169E1" alt="PostgreSQL" /> <img src="https://img.shields.io/badge/Sequelize-30363D?style=flat-square&labelColor=30363D&logo=sequelize&logoColor=52B0E7" alt="Sequelize" /> <img src="https://img.shields.io/badge/Prisma-30363D?style=flat-square&labelColor=30363D&logo=prisma&logoColor=2D3748" alt="Prisma" /> <img src="https://img.shields.io/badge/Migration-30363D?style=flat-square&labelColor=30363D" alt="Migration" /> <img src="https://img.shields.io/badge/Transaction_%2F_ACID-30363D?style=flat-square&labelColor=30363D" alt="Transaction / ACID" /> <img src="https://img.shields.io/badge/Decimal-30363D?style=flat-square&labelColor=30363D" alt="Decimal" /></td>
-</tr>
-<tr>
-<td valign="middle" width="17%"><b>Geospatial</b></td>
-<td valign="middle"><img src="https://img.shields.io/badge/PostGIS-30363D?style=flat-square&labelColor=30363D&logo=postgresql&logoColor=3FB950" alt="PostGIS" /> <img src="https://img.shields.io/badge/GeoServer-30363D?style=flat-square&labelColor=30363D&logo=osgeo&logoColor=4CAF50" alt="GeoServer" /> <img src="https://img.shields.io/badge/GDAL_%2F_OGR-30363D?style=flat-square&labelColor=30363D&logo=gdal&logoColor=5CAE58" alt="GDAL / OGR" /> <img src="https://img.shields.io/badge/QGIS-30363D?style=flat-square&labelColor=30363D&logo=qgis&logoColor=8BC34A" alt="QGIS" /> <img src="https://img.shields.io/badge/OGC_WMS_%2F_WFS-30363D?style=flat-square&labelColor=30363D" alt="OGC WMS / WFS" /> <img src="https://img.shields.io/badge/MVT-30363D?style=flat-square&labelColor=30363D" alt="MVT" /> <img src="https://img.shields.io/badge/SLD-30363D?style=flat-square&labelColor=30363D" alt="SLD" /> <img src="https://img.shields.io/badge/EPSG_%2F_CRS-30363D?style=flat-square&labelColor=30363D" alt="EPSG / CRS" /> <img src="https://img.shields.io/badge/OpenLayers-30363D?style=flat-square&labelColor=30363D&logo=openlayers&logoColor=4FC3F7" alt="OpenLayers" /> <img src="https://img.shields.io/badge/Leaflet-30363D?style=flat-square&labelColor=30363D&logo=leaflet&logoColor=7CB342" alt="Leaflet" /></td>
-</tr>
-<tr>
-<td valign="middle" width="17%"><b>DevOps</b></td>
-<td valign="middle"><img src="https://img.shields.io/badge/Docker-30363D?style=flat-square&labelColor=30363D&logo=docker&logoColor=2496ED" alt="Docker" /> <img src="https://img.shields.io/badge/GitHub_Actions-30363D?style=flat-square&labelColor=30363D&logo=githubactions&logoColor=58A6FF" alt="GitHub Actions" /> <img src="https://img.shields.io/badge/NGINX-30363D?style=flat-square&labelColor=30363D&logo=nginx&logoColor=3FB950" alt="NGINX" /> <img src="https://img.shields.io/badge/Blue--Green_Deployment-30363D?style=flat-square&labelColor=30363D" alt="Blue-Green Deployment" /> <img src="https://img.shields.io/badge/GHCR-30363D?style=flat-square&labelColor=30363D" alt="GHCR" /> <img src="https://img.shields.io/badge/Linux-30363D?style=flat-square&labelColor=30363D&logo=linux&logoColor=FCC624" alt="Linux" /> <img src="https://img.shields.io/badge/systemd-30363D?style=flat-square&labelColor=30363D" alt="systemd" /></td>
-</tr>
-<tr>
-<td valign="middle" width="17%"><b>Gözlemlenebilirlik</b></td>
-<td valign="middle"><img src="https://img.shields.io/badge/Grafana-30363D?style=flat-square&labelColor=30363D&logo=grafana&logoColor=F46800" alt="Grafana" /> <img src="https://img.shields.io/badge/Sentry_%2F_GlitchTip-30363D?style=flat-square&labelColor=30363D&logo=sentry&logoColor=A78BFA" alt="Sentry / GlitchTip" /> <img src="https://img.shields.io/badge/MinIO_%2F_S3-30363D?style=flat-square&labelColor=30363D&logo=minio&logoColor=F87171" alt="MinIO / S3" /> <img src="https://img.shields.io/badge/Postfix_%2F_Dovecot-30363D?style=flat-square&labelColor=30363D" alt="Postfix / Dovecot" /> <img src="https://img.shields.io/badge/Let%27s_Encrypt-30363D?style=flat-square&labelColor=30363D&logo=letsencrypt&logoColor=5EA9E8" alt="Let's Encrypt" /></td>
-</tr>
-<tr>
-<td valign="middle" width="17%"><b>Entegrasyon</b></td>
-<td valign="middle"><img src="https://img.shields.io/badge/REST-30363D?style=flat-square&labelColor=30363D&logo=fastapi&logoColor=C9D1D9" alt="REST" /> <img src="https://img.shields.io/badge/SSO_%2F_OAuth-30363D?style=flat-square&labelColor=30363D" alt="SSO / OAuth" /> <img src="https://img.shields.io/badge/Webhook-30363D?style=flat-square&labelColor=30363D" alt="Webhook" /> <img src="https://img.shields.io/badge/iyzico-30363D?style=flat-square&labelColor=30363D" alt="iyzico" /> <img src="https://img.shields.io/badge/Trendyol-30363D?style=flat-square&labelColor=30363D" alt="Trendyol" /> <img src="https://img.shields.io/badge/GTFS-30363D?style=flat-square&labelColor=30363D" alt="GTFS" /> <img src="https://img.shields.io/badge/OCR-30363D?style=flat-square&labelColor=30363D" alt="OCR" /></td>
-</tr>
-</table>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/rule-a-dark.svg" />
