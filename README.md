@@ -13,10 +13,12 @@
      her gün bir GitHub Action ile buradan okunup gömülüyor. -->
 <img src="https://komarev.com/ghpvc/?username=ekinakkaya0&label=g%C3%B6r%C3%BCnt%C3%BClenme&color=30363D&style=flat-square" width="1" height="1" alt="" />
 
-
 </div>
 
-<img src="assets/scene.svg" width="100%" alt="ASCII çizim: gece çalışma masası — üç ekran, dizüstü, kahve" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/data-dark.svg" />
+  <img src="assets/data-light.svg" width="100%" alt="gerçek GitHub verisi: diller, satırlar, çalışma saati ve haftanın günü" />
+</picture>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/rule-a-dark.svg" />
@@ -40,11 +42,22 @@
   <img src="assets/rule-b-light.svg" width="100%" alt="" />
 </picture>
 
+<img src="assets/scene.svg" width="100%" alt="ASCII çizim: gece çalışma masası — üç ekran, dizüstü, kahve" />
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-a-dark.svg" />
+  <img src="assets/rule-a-light.svg" width="100%" alt="" />
+</picture>
+
 ## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/marker-dark.svg" /><img src="assets/marker-light.svg" alt="" height="20" /></picture> Kısaca
 
-Yazılım işlerini uçtan uca alıyorum. Keşif görüşmesinden fizibiliteye, mimariden arayüz
-tasarımına, backend ve mobil geliştirmeden sunucuda yayına ve sonrasındaki işletime kadar
-zincirin tamamı bende kalıyor. Arada kimseye devretmem gerekmiyor.
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/quote-dark.svg" />
+  <img src="assets/quote-light.svg" width="100%" alt="Keşif görüşmesinden sunucudaki işletime kadar zincirin tamamı bende kalıyor." />
+</picture>
+
+Yazılım işlerini uçtan uca alıyorum: keşif görüşmesinden fizibiliteye, mimariden arayüz
+tasarımına, backend ve mobil geliştirmeden sunucuda yayına ve sonrasındaki işletime kadar.
 
 En büyük işim belediyeler için yazdığım multi-tenant yönetim platformu: tek kod tabanı,
 kurum başına ayrı veritabanı, 200'ün üzerinde backend modülü ve 43 panel modülü. Ama iş
@@ -54,39 +67,26 @@ ayrı Flutter uygulaması da aynı elden çıktı.
 
 ### Çalıştığım alanlar
 
-| Sektör | Ne yaptım |
-|:--|:--|
-| **kamu / belediye** | multi-tenant yönetim platformu, CBS, vatandaş mobil |
-| **tarım / agrotech** | üretici platformu, QR izlenebilirlik, toprak analizi |
-| **sanayi / üretim** | stok ve sipariş takibi, CNC makine izleme |
-| **perakende** | CRM/ERP, pazaryeri ve ödeme entegrasyonu |
-| **turizm / gastronomi** | restoran işletim sistemi, otel, garson uygulaması |
-| **spor kulüpleri** | kurumsal site, üyelik, içerik yönetimi |
-| **sivil toplum** | istihdam platformu, kadın platformu, bilim merkezi |
-| **kamu ihale / mevzuat** | mevzuat ve teklif modülü |
-
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-a-dark.svg" />
-  <img src="assets/rule-a-light.svg" width="100%" alt="" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/sectors-dark.svg" />
+  <img src="assets/sectors-light.svg" width="100%" alt="çalıştığım sektörler: kamu, tarım, sanayi, perakende, turizm, spor, sivil toplum, kamu ihale" />
 </picture>
-
-## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-uctan-uca-dark.svg" /><img src="assets/h-uctan-uca-light.svg" alt="Uçtan uca" width="100%" /></picture>
-
-| Aşama | Ne yapıyorum |
-|:--|:--|
-| **Keşif ve kapsam** | Kurumla oturup ihtiyacı çıkarmak, mevcut sistemi incelemek, kapsamı yazıya dökmek. |
-| **Fizibilite ve teklif** | Sunucu altyapısı ve maliyet hesabı, teknik ön araştırma raporu, hibe/ihale başvuru dosyası, fiyat teklifi. |
-| **Mimari** | Veri modeli, API sözleşmesi, yetki matrisi, entegrasyon sınırları, monorepo mu ayrı servis mi kararı. |
-| **Arayüz** | Mockup'tan üretime. Tasarım dili, responsive davranış, bileşen kütüphanesi. |
-| **Geliştirme** | Backend, frontend ve mobil. Node/Express, FastAPI, Next.js, Flutter. |
-| **Veri** | Şema tasarımı, migration hattı, PostGIS, raporlama ve toplu veri aktarımı. |
-| **Yayın** | Docker, GitHub Actions, blue-green deployment, nginx, TLS, DNS. Hetzner, Turhost, Hostinger ve on-prem. |
-| **İşletim** | İzleme ve alarm, yedekleme ve restore, olay müdahalesi, kapasite ve maliyet takibi. |
-| **Belgeleme** | Kullanım kılavuzu, runbook, teknik olmayan anlatım, satış sunumu. |
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/rule-b-dark.svg" />
   <img src="assets/rule-b-light.svg" width="100%" alt="" />
+</picture>
+
+## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-uctan-uca-dark.svg" /><img src="assets/h-uctan-uca-light.svg" alt="Uçtan uca" width="100%" /></picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/stages-dark.svg" />
+  <img src="assets/stages-light.svg" width="100%" alt="teslim zinciri: keşif, fizibilite, mimari, arayüz, geliştirme, veri, yayın, işletim, belgeleme" />
+</picture>
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-a-dark.svg" />
+  <img src="assets/rule-a-light.svg" width="100%" alt="" />
 </picture>
 
 ## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-derinlik-dark.svg" /><img src="assets/h-derinlik-light.svg" alt="Derinlik" width="100%" /></picture>
@@ -95,18 +95,18 @@ Katman başına, gerçekten uğraştığım türden sorunlar:
 
 | Katman | |
 |:--|:--|
-| **Reverse proxy** | Blue-green deployment'ta nginx upstream'ini devretmek. Tek dosya olarak bind-mount edilmiş bir config'in konteynere hiç inmemesi (stale inode); `nginx -s reload` bunu kurtarmıyor, süreci HUP'lamak gerekiyor. |
-| **PostgreSQL** | Tenant rollerinin grant kaybından sonra gelen `permission denied for table`. `pg_restore`'un dolu bir şemaya append edip kayıtları ikiye katlaması. Migration'ın bütün aktif tenant'lara sırayla uygulanması. |
-| **Geospatial** | Yanlış etiketlenmiş EPSG tanımları ve CAD kaynaklı koordinat kayması. `gpkg_extensions` tablosu olmadan GeoServer'ın GeoPackage katmanını hiç görmemesi. SLD ile referans yazılıma piksel düzeyinde renk eşleme, MVT cache'inin sunucuda pişirilmesi. |
-| **Uygulama** | Kilitsiz seri numarası üretiminde race condition. Alan adı whitelist'te olmadığı için API mapper'ının payload'u sessizce düşürmesi. Mali hesapta floating point'in yasak olduğu yerler. |
-| **Mobil** | OCR başarısız olunca e-Devlet doğrulamasının kırılması ve başvuru akışının komple durması. Upload'ın 413 dönmesi çünkü isteği alan vhost'ta `client_max_body_size` tanımlı değil. |
-| **Sistem** | 30 GB'a dayanan bir Next.js build'i için swap açmak. Self-hosted runner'ların topluca deregister olması. systemd unit'leri, disk baskısı, arşivleme. |
-| **Ağ ve sertifika** | Postfix SNI map'inin sertifika yenilemesinden sonra bayat kalması; `postmap -F` olmadan çözülmüyor. Birbirini ezen iki ayrı certbot ağacı. |
-| **Olay müdahalesi** | Ele geçirilmiş bir sitede forensic çıkarmak. Üretim veritabanlarını yedekten ayağa kaldırmak ve nedeni ortadan kaldıran düzeltmeyi hatta eklemek. |
+| <picture><source media="(prefers-color-scheme: dark)" srcset="assets/marker-dark.svg" /><img src="assets/marker-light.svg" alt="" height="14" /></picture> **Reverse proxy** | Blue-green deployment'ta nginx upstream'ini devretmek. Tek dosya olarak bind-mount edilmiş bir config'in konteynere hiç inmemesi (stale inode); `nginx -s reload` bunu kurtarmıyor, süreci HUP'lamak gerekiyor. |
+| <picture><source media="(prefers-color-scheme: dark)" srcset="assets/marker-dark.svg" /><img src="assets/marker-light.svg" alt="" height="14" /></picture> **PostgreSQL** | Tenant rollerinin grant kaybından sonra gelen `permission denied for table`. `pg_restore`'un dolu bir şemaya append edip kayıtları ikiye katlaması. Migration'ın bütün aktif tenant'lara sırayla uygulanması. |
+| <picture><source media="(prefers-color-scheme: dark)" srcset="assets/marker-dark.svg" /><img src="assets/marker-light.svg" alt="" height="14" /></picture> **Geospatial** | Yanlış etiketlenmiş EPSG tanımları ve CAD kaynaklı koordinat kayması. `gpkg_extensions` tablosu olmadan GeoServer'ın GeoPackage katmanını hiç görmemesi. SLD ile referans yazılıma piksel düzeyinde renk eşleme, MVT cache'inin sunucuda pişirilmesi. |
+| <picture><source media="(prefers-color-scheme: dark)" srcset="assets/marker-dark.svg" /><img src="assets/marker-light.svg" alt="" height="14" /></picture> **Uygulama** | Kilitsiz seri numarası üretiminde race condition. Alan adı whitelist'te olmadığı için API mapper'ının payload'u sessizce düşürmesi. Mali hesapta floating point'in yasak olduğu yerler. |
+| <picture><source media="(prefers-color-scheme: dark)" srcset="assets/marker-dark.svg" /><img src="assets/marker-light.svg" alt="" height="14" /></picture> **Mobil** | OCR başarısız olunca e-Devlet doğrulamasının kırılması ve başvuru akışının komple durması. Upload'ın 413 dönmesi çünkü isteği alan vhost'ta `client_max_body_size` tanımlı değil. |
+| <picture><source media="(prefers-color-scheme: dark)" srcset="assets/marker-dark.svg" /><img src="assets/marker-light.svg" alt="" height="14" /></picture> **Sistem** | 30 GB'a dayanan bir Next.js build'i için swap açmak. Self-hosted runner'ların topluca deregister olması. systemd unit'leri, disk baskısı, arşivleme. |
+| <picture><source media="(prefers-color-scheme: dark)" srcset="assets/marker-dark.svg" /><img src="assets/marker-light.svg" alt="" height="14" /></picture> **Ağ ve sertifika** | Postfix SNI map'inin sertifika yenilemesinden sonra bayat kalması; `postmap -F` olmadan çözülmüyor. Birbirini ezen iki ayrı certbot ağacı. |
+| <picture><source media="(prefers-color-scheme: dark)" srcset="assets/marker-dark.svg" /><img src="assets/marker-light.svg" alt="" height="14" /></picture> **Olay müdahalesi** | Ele geçirilmiş bir sitede forensic çıkarmak. Üretim veritabanlarını yedekten ayağa kaldırmak ve nedeni ortadan kaldıran düzeltmeyi hatta eklemek. |
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-a-dark.svg" />
-  <img src="assets/rule-a-light.svg" width="100%" alt="" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-b-dark.svg" />
+  <img src="assets/rule-b-light.svg" width="100%" alt="" />
 </picture>
 
 ## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/h-yakindan-dark.svg" /><img src="assets/h-yakindan-light.svg" alt="Yakından" width="100%" /></picture>
@@ -194,20 +194,15 @@ siteleri, bilim merkezi, kamu ihale ve mevzuat modülü.
 </details>
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-b-dark.svg" />
-  <img src="assets/rule-b-light.svg" width="100%" alt="" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-a-dark.svg" />
+  <img src="assets/rule-a-light.svg" width="100%" alt="" />
 </picture>
 
 ## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/marker-dark.svg" /><img src="assets/marker-light.svg" alt="" height="20" /></picture> Nasıl çalışırım
 
-Üretimle ilgili bir şey iddia etmeden önce ölçerim; "muhtemelen öyledir" bir cevap değil.
-Denetim kanıtı olabilecek kaydı silmem, arşivlerim. Şema değişikliği elle değil migration
-ile gider. Geri dönüşü olmayan işlerde tek gözle yetinmem, biteni bağımsız gözlerle kırmaya
-çalışırım. Deployment'ın fark edilmesi gerekmiyor; fark ediliyorsa hatta bir sorun var.
-
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/rule-a-dark.svg" />
-  <img src="assets/rule-a-light.svg" width="100%" alt="" />
+  <source media="(prefers-color-scheme: dark)" srcset="assets/principles-dark.svg" />
+  <img src="assets/principles-light.svg" width="100%" alt="çalışma ilkeleri: ölç, silme, migration, tek göz yetmez" />
 </picture>
 
 <picture>

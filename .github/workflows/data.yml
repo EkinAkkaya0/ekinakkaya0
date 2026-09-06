@@ -1,0 +1,43 @@
+name: Veri Paneli
+
+on:
+  schedule:
+    - cron: "50 3 * * *"
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "tools/gen_data.py"
+      - ".github/workflows/data.yml"
+
+concurrency:
+  group: data
+  cancel-in-progress: true
+
+jobs:
+  uret:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # METRICS_TOKEN: repo + read:user + read:org scope'lu classic PAT.
+      # Yoksa script 0 ile çıkar ve mevcut veri korunur; iş akışı kırılmaz.
+      - name: Veri panelini üret
+        run: python tools/gen_data.py
+        env:
+          METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
+
+      - name: Değiştiyse işle
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/data-light.svg assets/data-dark.svg
+          git diff --staged --quiet && echo "değişiklik yok" && exit 0
+          git commit -m "veri paneli güncellendi"
+          git pull --rebase origin main
+          git push
