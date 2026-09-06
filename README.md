@@ -213,6 +213,11 @@ siteleri, bilim merkezi, kamu ihale ve mevzuat modülü.
 ## <picture><source media="(prefers-color-scheme: dark)" srcset="assets/marker-dark.svg" /><img src="assets/marker-light.svg" alt="" height="20" /></picture> Aktivite
 
 <picture>
+  <source media="(prefers-color-scheme: dark)" srcset="assets/ach-dark.svg" />
+  <img src="assets/ach-light.svg" width="100%" alt="GitHub rozetleri: Pull Shark, Pair Extraordinaire, YOLO" />
+</picture>
+
+<picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/ekinakkaya0/ekinakkaya0/output/github-snake-dark.svg" />
   <img src="https://raw.githubusercontent.com/ekinakkaya0/ekinakkaya0/output/github-snake.svg" width="100%" alt="katkı grafiğinde dolaşan yılan" />
 </picture>

@@ -129,6 +129,7 @@ def build():
     w(pic("principles", "çalışma ilkeleri: ölç, silme, migration, tek göz yetmez")); w("")
     w(RULE()); w("")
     w(MARK("Aktivite")); w("")
+    w(pic("ach", "GitHub rozetleri: Pull Shark, Pair Extraordinaire, YOLO")); w("")
     w(AKTIVITE); w("")
     return "\n".join(o) + "\n"
 
